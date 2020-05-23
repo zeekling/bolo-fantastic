@@ -45,7 +45,7 @@
                 <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}" />
                 <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/style.css?${staticResourceVersion}" />
                      <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/swiper.min.css">
-        <script src='https://www.zeekling.cn/cdn/css/js/swiper.min.js'></script>
+        <script src='https://www.zeekling.cn/cdn/js/swiper.min.js'></script>
             </@head>
             <#-- <#include "style.theme.ftl"> -->
         </head>
