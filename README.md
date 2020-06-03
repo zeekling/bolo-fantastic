@@ -4,5 +4,6 @@
 
 皮肤样例：
 - [bolo-fantastic](https://www.zeekling.cn/?skin=bolo-fantastic-mod)
+- [bolo-NeoEase](https://www.zeekling.cn/?skin=bolo-NeoEase-mod)
 
 个人站点：[小令童鞋](https://www.zeekling.cn/)
