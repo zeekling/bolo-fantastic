@@ -18,6 +18,18 @@
 
 -->
 <div class="card widget">
+  <div class="card-content" style="width:100%">
+    <div class="menu">
+	  <h3 class="menu-label">
+	  ${noticeBoardLabel}
+	  </h3>
+	  <ul class="menu-list">
+	  ${noticeBoard}
+	  </ul>
+	</div>
+  </div>
+</div>
+<div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             ${mostViewCountArticlesLabel}
@@ -49,30 +61,4 @@
 
     </div>
 </div>
-<div class="card widget">
-    <div class="card-content">
-        <div class="menu">
-            <h3 class="menu-label">
-                ${archiveLabel}
-            </h3>
-            <ul class="menu-list">
-                <#list archiveDates as archiveDate>
-                    <li>
-                        <a class="level is-marginless"
-                           href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
-                            <span class="level-start">
-                                <span class="level-item">${archiveDate.archiveDateYear}
-                                    ${yearLabel}
-                                    ${archiveDate.archiveDateMonth}
-                                    ${monthLabel}</span>
-                            </span>
-                            <span class="level-end">
-                                <span class="level-item tag">${archiveDate.archiveDatePublishedArticleCount}</span>
-                            </span>
-                        </a>
-                    </li>
-                </#list>
-            </ul>
-        </div>
-    </div>
-</div>
+
