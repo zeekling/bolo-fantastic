@@ -164,6 +164,18 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
         </div>
     </div>
     <div class="column-right-shadow is-hidden-widescreen is-6-fullhd">
+		<div class="card widget">
+		  <div class="card-content" style="width:100%">
+		      <div class="menu">
+			      <h3 class="menu-label">
+   		            ${noticeBoardLabel}
+				  </h3>
+				  <ul class="menu-list">
+				    ${noticeBoard}
+				  </ul>
+			  </div>
+		  </div>
+		</div>
         <div class="card widget">
             <div class="card-content">
                 <h3 class="menu-label">
