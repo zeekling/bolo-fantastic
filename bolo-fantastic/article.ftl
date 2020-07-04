@@ -151,6 +151,16 @@
                     </div>
                 </section>
             </div>
+			<!-- 博客底部-->
+			<ins class="adsbygoogle"
+			     style="display:block;height:130px;width:900px;margin:auto;text-align:center;"
+				 data-ad-client="ca-pub-1331219010215317"
+				 data-ad-slot="2801313884"
+				 data-full-width-responsive="true">
+			</ins>
+			<script>
+				(adsbygoogle = window.adsbygoogle || []).push({});
+			</script>
             <a id="back-to-top" title="返回顶部" href="javascript:"><i class="fas fa-chevron-up"></i></a>
             <#include "footer.ftl">
             <@comment_script oId=article.oId commentable=article.commentable>
