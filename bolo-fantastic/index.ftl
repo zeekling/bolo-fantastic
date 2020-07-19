@@ -74,7 +74,7 @@
                 <#include "side.ftl">
             </div>
 
-<!-- 博客底部-->
+<!-- 博客底部
 <ins class="adsbygoogle"
      style="display:block;height:90px;width:728px;margin:auto;text-align:center;"
 	 data-ad-client="ca-pub-1331219010215317"
@@ -83,7 +83,7 @@
 </ins>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+</script>-->
 
         </div>
     </section>
