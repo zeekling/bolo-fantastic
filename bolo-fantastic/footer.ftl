@@ -77,7 +77,32 @@ $(document).ready(function(){
 			anim:4
 		});
 	}
+	$(".gallery-item").each(function(){
+		var href = $(this).attr("href");
+		var img = $(this).find("img");
+		var w = img.width;
+		var h = img.height;
+	    $(this).attr("href","javascript:void(0)");
+	});
+	$(".gallery-item").on("click",function(){
+        var img = $(this).find("img");
+		var w = img.width;
+		var h = img.height;
+		var url = $(img).attr("src");
+		showImage(w, h, url);
+	});
 });
+
+function showImage(w, h,url){
+	layer.open({
+		type:1,
+		maxmin:true,
+		offset: 'auto',
+		area: [w, h],
+		title: "${blogTitle!}图片显示",
+		content: '<img src="' + url + '" alt="${blogTitle!}图片" ' + url +' 显示异常>'
+	});
+}
 
 function enterSearch(event){
 	if(event.keyCode == "13"){
