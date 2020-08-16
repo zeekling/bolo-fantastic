@@ -32,9 +32,9 @@
 <div class="card widget">
 	<div class="card-content" style="width:100%">
 		<div class="menu">
-			<label class="screen-reader-text" for="s">搜索  </label>
-			<input type="text" required="required" value="" name="s" id="search">
-			<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search()">
+			<label class="screen-reader-text" for="s">搜索：</label>
+			<input type="text" required="required" value="" name="s" id="search" onkeydown="enterSearch(event)">&nbsp;&nbsp;
+	    	<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search()">
 		</div>
 	</div>
 </div>

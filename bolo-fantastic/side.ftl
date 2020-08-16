@@ -83,7 +83,7 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
                     </#if>
                     <#if usite.usiteWeChat !=''>
                         <span class="level-item button is-marginless" target="_blank" title="WeChat"
-                           onclick="javascript:alert('我的微信号：${usite.usiteWeChat}')">
+                           onclick="wechat()">
                             <i class="fab fa-weixin"></i>
                         </span>
                     </#if>
