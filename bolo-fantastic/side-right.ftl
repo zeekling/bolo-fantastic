@@ -30,6 +30,15 @@
   </div>
 </div>
 <div class="card widget">
+	<div class="card-content" style="width:100%">
+		<div class="menu">
+			<label class="screen-reader-text" for="s">搜索  </label>
+			<input type="text" required="required" value="" name="s" id="search">
+			<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search()">
+		</div>
+	</div>
+</div>
+<div class="card widget">
     <div class="card-content">
         <h3 class="menu-label">
             ${mostViewCountArticlesLabel}
@@ -61,22 +70,3 @@
 
     </div>
 </div>
-<!--
-<div class="card widget">
-	<div class="card-content" style="width:100%">
-		<div class="menu">
-			<h3 class="menu-label">广告</h3>
-			<ul class="menu-list">
-				<ins class="adsbygoogle"
-					style="display:inline-block;width:290px;height:500px"
-					data-ad-client="ca-pub-1331219010215317"
-					data-ad-slot="5542691247">
-				</ins>
-				<script>
-					(adsbygoogle = window.adsbygoogle || []).push({});
-				</script>
-			</ul>
-		</div>
-	</div>
-</div>
--->
