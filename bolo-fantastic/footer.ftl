@@ -47,6 +47,71 @@
 <script src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}"></script>
 <script src="${staticServePath}/skins/${skinDirName}/js/common${miniPostfix}.js?${staticResourceVersion}"></script>
 <script src="${staticServePath}/skins/${skinDirName}/js/layer.js?${staticResourceVersion}"></script>
+<script type="text/javascript" >
+
+$(document).ready(function(){
+	var ctrlDown = false,ctrlKey = 17,cmdKey = 91,vKey = 86, cKey = 67;
+	$(document).keydown(function(e) {
+		if (e.keyCode == ctrlKey || e.keyCode == cmdKey) {
+			ctrlDown = true;
+		}
+	}).keyup(function(e) {
+		if (e.keyCode == ctrlKey || e.keyCode == cmdKey) {
+			ctrlDown = false;
+		}
+	});
+	$(document).keydown(function(e) {
+		if (ctrlDown && (e.keyCode == cKey)) {
+			layer.open({
+				title:"${blogTitle!}友情提示",
+				content:"您复制了本站内容,转载请注明来源。",
+				anim:4
+			});
+		}
+		if (ctrlDown && (e.keyCode == vKey)) console.log("Document catch Ctrl+V");
+	});
+	document.oncopy = function(){
+		layer.open({
+			title:"${blogTitle!}友情提示",
+			content:"您复制了本站内容,转载请注明来源。",
+			anim:4
+		});
+	}
+});
+
+function enterSearch(event){
+	if(event.keyCode == "13"){
+		search();
+	}
+
+}
+function qq(){
+	layer.open({
+		title:"${blogTitle!}友情提示",
+		content:"${blogTitle!}的QQ号码是:${usite.usiteQQ}",
+		anim:4
+	});
+}
+function wechat(){
+	layer.open({
+		title:"${blogTitle!}友情提示",
+		content:"${blogTitle!}的微信号码是:${usite.usiteWeChat}",
+		anim:4
+	});
+}
+function search(){
+	var s = $("#search").val();
+	if (s == ""){
+		layer.open({
+			title:"${blogTitle!}友情提示",
+			content:"搜索关键词不能为空!",
+			anim:4
+		});
+		return;
+	}
+	window.open("https://www.zeekling.cn/search?keyword=" + s);
+}
+</script>
 <#include "../../common-template/label.ftl">
 
 ${plugins}

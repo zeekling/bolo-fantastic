@@ -76,10 +76,10 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
             <div class="level is-mobile">
                 <#if usite??>
                     <#if usite.usiteQQ !=''>
-                        <a class="level-item button is-marginless" target="_blank" title="QQ"
-                           href="tencent://message/?uin=${usite.usiteQQ}">
-                            <i class="fab fa-qq"></i>
-                        </a>
+                        <span class="level-item button is-marginless" target="_blank" title="QQ"
+                           onclick="qq()">
+						   <i class="fab fa-qq"></i>
+                        </span>
                     </#if>
                     <#if usite.usiteWeChat !=''>
                         <span class="level-item button is-marginless" target="_blank" title="WeChat"

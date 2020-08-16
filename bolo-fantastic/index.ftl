@@ -77,30 +77,6 @@
     </section>
 </div>
 <a id="back-to-top" title="返回顶部" href="javascript:"><i class="fas fa-chevron-up"></i></a>
-<script type="text/javascript" >
-function enterSearch(event){
-	if(event.keyCode == "13"){
-		search();
-	}
-}
-function wechat(){
-	layer.open({
-		title:"提示",
-		content:"我的微信号码是:${usite.usiteWeChat}"
-			});
-}
-function search(){
-	var s = $("#search").val();
-	if (s == ""){
-		layer.open({
-			title:"提示",
-			content:"搜索结果不能为空!"
-			});
-		return;
-	}
-	window.open("https://www.zeekling.cn/search?keyword=" + s);
-}
-</script>
 <#include "footer.ftl">
 </body>
 

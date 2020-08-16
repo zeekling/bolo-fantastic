@@ -30,6 +30,11 @@
                 <div class="level">
                     <div class="blog-slider card">
                         <div class="blog-slider__wrp swiper-wrapper">
+							 <div class="blog-slider__img">
+							    <a href="${servePath}${article.articlePermalink}">
+								    <img src="${article.articleImg1URL}" alt="${article.articleTitle!}"  referrerpolicy="origin">
+								</a>
+						     </div>
                             <div class="blog-slider__item swiper-slide">
                                 <div class="blog-slider__content">
                                     <div>
@@ -59,6 +64,11 @@
                 </div>
                 <#else>
                     <div class="card">
+						 <div class="card-image">
+						   <a href="${servePath}${article.articlePermalink}">
+						     <img class="thumbnail" src="${article.articleImg1URL}" alt="${article.articleTitle!}" referrerpolicy="origin">
+						   </a>
+						 </div>
                         <div class="card-content article " id="card-content" style="width: 100%">
                             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                                 <div class="level-left">
