@@ -89,21 +89,23 @@ $(document).ready(function(){
 		var w = img.width;
 		var h = img.height;
 		var url = $(img).attr("src");
-		showImage(w, h, url);
+		var alt = $(img).attr("alt");
+		showImage(w, h, url, alt);
 	});
 });
-
-function showImage(w, h,url){
-	layer.open({
-		type:1,
-		maxmin:true,
-		offset: 'auto',
-		area: [w, h],
-		title: "${blogTitle!}图片显示",
-		content: '<img src="' + url + '" alt="${blogTitle!}图片" ' + url +' 显示异常>'
+function showImage(w, h,url, alt){
+	layer.photos({
+		photos:{
+			"title":"${blogTitle!}图片显示",
+			"id":"",
+			"data":[{
+				"alt":alt,
+				"src":url,
+				"thumb":url
+			}]
+		},anim: 5
 	});
 }
-
 function enterSearch(event){
 	if(event.keyCode == "13"){
 		search();
