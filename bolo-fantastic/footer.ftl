@@ -103,7 +103,7 @@ function showImage(w, h,url, alt){
 				"src":url,
 				"thumb":url
 			}]
-		},anim: 5
+		},anim: 0
 	});
 }
 function enterSearch(event){
