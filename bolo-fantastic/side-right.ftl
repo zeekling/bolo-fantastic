@@ -32,8 +32,8 @@
 <div class="card widget">
 	<div class="card-content" style="width:100%">
 		<div class="menu">
-			&nbsp;&nbsp;<input type="text" required="required" value="" name="s" id="search" onkeydown="enterSearch(event)">&nbsp;&nbsp;
-	    	<input type="submit" id="searchsubmit" class="button" value="搜索本站" onclick="search()">
+			&nbsp;<input type="text" required="required" value="" name="s" id="search" onkeydown="enterSearch(event)">&nbsp;
+	    	<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search()">
 		</div>
 	</div>
 </div>
@@ -48,7 +48,7 @@
                 <#if article.articleImg1URL?? && article.articleImg1URL!=''>
                     <a href="${servePath}${article.articlePermalink}" class="media-left">
                         <p class="image is-64x64">
-                            <img class="thumbnail" src="${article.articleImg1URL!}" alt="${article.articleTitle!}">
+                            <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL!}" alt="${article.articleTitle!}">
                         </p>
                     </a>
                 </#if>

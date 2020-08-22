@@ -189,7 +189,7 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
                         <#if article.articleImg1URL?? && article.articleImg1URL!=''>
                             <a href="${servePath}${article.articlePermalink}" class="media-left">
                                 <p class="image is-64x64">
-                                    <img class="thumbnail" src="${article.articleImg1URL!}"
+                                    <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL!}"
                                          alt="${article.articleTitle!}">
                                 </p>
                             </a>

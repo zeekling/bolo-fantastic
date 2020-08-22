@@ -92,7 +92,16 @@ $(document).ready(function(){
 		var alt = $(img).attr("alt");
 		showImage(w, h, url, alt);
 	});
+
+	$(".thumbnail").each(function(){
+		var src = $(this).attr("data-src");
+		if (src.indexOf("img.zeekling.cn") != -1){
+			src = src.replace(".jpg", ".jpg!253-150");
+		}
+		$(this).attr("src", src);
+	});
 });
+
 function showImage(w, h,url, alt){
 	layer.photos({
 		photos:{
