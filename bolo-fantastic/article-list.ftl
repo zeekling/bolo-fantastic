@@ -30,12 +30,12 @@
                 <div class="level">
                     <div class="blog-slider card">
                         <div class="blog-slider__wrp swiper-wrapper">
+                            <div class="blog-slider__item swiper-slide">
 							 <div class="blog-slider__img">
 							    <a href="${servePath}${article.articlePermalink}">
 								    <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"  referrerpolicy="origin">
 								</a>
 						     </div>
-                            <div class="blog-slider__item swiper-slide">
                                 <div class="blog-slider__content">
                                     <div>
                                         <span class="blog-slider__code"
@@ -57,7 +57,6 @@
                                         class="blog-slider__button">阅读更多</a>
                                 </div>
                             </div>
-
                         </div>
                         <div class="blog-slider__pagination"></div>
                     </div>

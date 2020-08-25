@@ -95,9 +95,6 @@ $(document).ready(function(){
 
 	$(".thumbnail").each(function(){
 		var src = $(this).attr("data-src");
-		if (src.indexOf("img.zeekling.cn") != -1){
-			src = src.replace(".jpg", ".jpg!253-150");
-		}
 		$(this).attr("src", src);
 	});
 });
