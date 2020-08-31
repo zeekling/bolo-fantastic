@@ -144,25 +144,6 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
             </div>
         </div>
     </div>
-    <div class="card widget">
-        <div class="card-content">
-            <div class="menu">
-                <h3 class="menu-label">
-                    ${tagLabel}
-                </h3>
-                <div class="field is-grouped is-grouped-multiline">
-                    <#list mostUsedTags as tag>
-                        <div class="control">
-                            <a class="tags has-addons" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
-                                <span class="tag">${tag.tagTitle}</span>
-                                <span class="tag is-grey">${tag.tagPublishedRefCount!}</span>
-                            </a>
-                        </div>
-                    </#list>
-                </div>
-            </div>
-        </div>
-    </div>
         <div class="card widget">
            <div class="card-content">
 		      <h3 class="menu-label">
@@ -171,15 +152,21 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
 			   <#list recentComments as comment>
                 <article class="media">
 				   <a href="${servePath}${comment.commentSharpURL}" class="media-left">
-				      <p class="image is-64x64">
-					     <img class="thumbnail" src="${adminUser.userAvatar!}"   data-src="${comment.commentThumbnailURL}"
+				      <p class="image is-48x48">
+					     <img class="thumbnail" src="${adminUser.userAvatar!}"
+						    data-src="${comment.commentThumbnailURL}"
 						    alt="${comment.commentName}">
 					 </p>
 				   </a>
 				   <div class="media-content">
 				      <div class="content">
                          <div style="padding-top: 10px;">
-							<div class="has-text-grey is-size-7 is-uppercase">${comment.commentName}</div>
+							<div class="has-text-grey is-size-7 is-uppercase">
+							   <a href="${comment.commentURL}" rel="nofollow" target="_black">
+							   ${comment.commentName}</a>
+							   评论于
+							   ${comment.commentDate2?string("yyyy-MM-dd")}
+							</div>
 						 </div>
 						 <a href="${servePath}${comment.commentSharpURL}"
 						     class="title has-link-black-ter is-size-6
@@ -202,6 +189,15 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
 				  </ul>
 			  </div>
 		  </div>
+		</div>
+		<div class="card widget">
+		    <div class="card-content" style="width:100%">
+				<div class="menu">
+					&nbsp;<input type="text" required="required" value="" name="s" id="search-m"
+						onkeydown="enterSearch(event)">&nbsp;
+						<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search_m()">
+				</div>
+			</div>
 		</div>
         <div class="card widget">
             <div class="card-content">
@@ -235,6 +231,25 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
             </div>
         </div>
 
+    <div class="card widget">
+        <div class="card-content">
+            <div class="menu">
+                <h3 class="menu-label">
+                    ${tagLabel}
+                </h3>
+                <div class="field is-grouped is-grouped-multiline">
+                    <#list mostUsedTags as tag>
+                        <div class="control">
+                            <a class="tags has-addons" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+                                <span class="tag">${tag.tagTitle}</span>
+                                <span class="tag is-grey">${tag.tagPublishedRefCount!}</span>
+                            </a>
+                        </div>
+                    </#list>
+                </div>
+            </div>
+        </div>
+    </div>
     </div>
 
 

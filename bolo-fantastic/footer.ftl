@@ -144,6 +144,18 @@ function search(){
 	}
 	window.open("https://www.zeekling.cn/search?keyword=" + s);
 }
+function search_m(){
+	var s = $("#search-m").val();
+	if (s == ""){
+		layer.open({
+			title:"${blogTitle!}友情提示",
+			content:"搜索关键词不能为空!",
+			anim:4
+		});
+		return;
+	}
+	window.open("https://www.zeekling.cn/search?keyword=" + s);
+}
 </script>
 <#include "../../common-template/label.ftl">
 
