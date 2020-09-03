@@ -19,24 +19,27 @@
 -->
 <footer class="footer">
     <div class="container">
-        <div class="level">
+        <div class="level footer_main">
             <div class="level-start has-text-centered-mobile">
-                <p class="is-size-6">
-                    &copy; ${.now?string('yyyy')} ${blogTitle!}&nbsp;
+			        <div>
+                    <#include "../../common-template/macro-user_site.ftl"/>
+					<@userSite dir="n"/>
+					</div>
+                    &copy; ${.now?string('yyyy')} ${blogTitle!} • ${onlineVisitor1Label}${onlineVisitorCnt}
+					<br>
+					${footerContent}
+					<br>
                     Powered by <a href="https://github.com/AdlerED/bolo-solo" target="_blank">Bolo</a>
-                    <br>
-                </p>
+					Theme ${skinDirName}
+					<sup>[<a href="https://git.zeekling.cn/zeekling/bolo-skins/src/branch/master/bolo-fantastic"
+					target="_blank">ref</a>]</sup>
+					by <a href="https://www.zeekling.cn" target="_blank">唐墨夏</a>
             </div>
-            <div class="level-end">
-                    <a href="${servePath}/search"> 搜索</a>&nbsp;•&nbsp;
-                    <a href="${servePath}/tags.html"> ${allTagsLabel}</a>&nbsp;•&nbsp;
-                    <a href="${servePath}/archives.html"> ${archiveLabel}</a>&nbsp;•&nbsp;
-                    <a href="${servePath}/links.html">
-                        ${linkLabel}
-                    </a>
-                </div>
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-                    <div>${footerContent} <br></div>
+					<#--
+                    <#include "../../common-template/macro-user_site.ftl"/>
+					<@userSite dir="n"/>
+					-->
                 </div>
             </div>
         </div>

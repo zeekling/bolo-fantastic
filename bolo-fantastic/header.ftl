@@ -17,6 +17,23 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
+<style type="text/css">
+.user__site {
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	border-bottom: 0;
+	margin: 8px 5px 0 0;
+	width: 16px;
+}
+.footer_main{
+	max-width: 600px;
+	margin: auto;
+}
+.footer{
+	padding: 1rem 1.5rem 1.5rem;
+}
+</style>
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">
         <div class="navbar-brand transparent">
@@ -33,6 +50,9 @@
         <div id="navMenu" class="navbar-menu transparent">
             <div class="navbar-start transparent">
                 <div class="navbar-start">
+					<a class="navbar-item" href="${servePath}/tags.html"  rel="section">${allTagsLabel}</a>
+					<a class="navbar-item" href="${servePath}/archives.html"  rel="section">${archiveLabel}</a>
+					<a class="navbar-item" href="${servePath}/links.html"  rel="section">${linkLabel}</a>
                     <#list pageNavigations as page>
                         <a class="navbar-item" href="${page.pagePermalink}" target="${page.pageOpenTarget}"
                            rel="section">

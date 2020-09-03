@@ -507,4 +507,11 @@
     .has-text-black-ter {
         color: var(--color) !important;
     }
+	.user__site{
+		    display: inline-block;
+			height: 16px;
+			line-height: 16px;
+			border-bottom: 0;
+			margin: 8px 5px 0 0;
+	}
 </style>
