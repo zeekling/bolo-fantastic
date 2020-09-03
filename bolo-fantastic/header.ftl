@@ -33,6 +33,23 @@
 .footer{
 	padding: 1rem 1.5rem 1.5rem;
 }
+.blog-slider__img{
+	margin-left: 20px;
+	width: 280px;
+	height: 178px;
+}
+.card-normal .card .card-image img{
+	margin-left: 15px;
+}
+#search,#search-m{
+	box-shadow: none;
+	border: 1px solid #e1e8ed;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color:#657786;
+	resize: vertical;
+	height:30px;
+}
 </style>
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">
