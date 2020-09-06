@@ -27,7 +27,7 @@
 	width: 16px;
 }
 .footer_main{
-	max-width: 600px;
+	max-width: 900px;
 	margin: auto;
 }
 .footer{
@@ -49,6 +49,13 @@
 	color:#657786;
 	resize: vertical;
 	height:30px;
+}
+
+.vditor-tooltipped {
+	border: none !important;
+}
+.vditor-toolbar{
+	padding-left: 15px !important;
 }
 </style>
 <nav class="navbar navbar-main  is-paddingless ">

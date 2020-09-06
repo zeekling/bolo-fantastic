@@ -160,10 +160,10 @@
                 <#if 0 !=relevantArticlesDisplayCount>
                     page.loadRelevantArticles('${article.oId}', '<h3>${relevantArticlesLabel}</h3>');
                 </#if>
-                Skin.initArticle()
             </@comment_script>
             <script>
                 // 延时检测右侧 “相关阅读” 是否为空，如果空则删除空 div，好看些
+				/**
                 $(function () {
                                         var tempHtml =
                                             '<a rel="nofollow" href="javascript:void(0)"><i class="fas fa-search fa-spin"></i> 努力寻找中 ...</a>';
@@ -185,7 +185,7 @@
                                                 }, 1000)
                                             }
                                         }, 3000)
-                                    })
+                                    })**/
             </script>
         </body>
     </html>
