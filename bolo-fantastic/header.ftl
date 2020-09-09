@@ -57,6 +57,9 @@
 .vditor-toolbar{
 	padding-left: 15px !important;
 }
+.vditor-reset{
+	background-color:white !important;
+}
 </style>
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">
