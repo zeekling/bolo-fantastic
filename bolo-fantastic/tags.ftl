@@ -66,7 +66,7 @@
                                                 <div class="field is-grouped is-grouped-multiline">
                                                     <#list mostUsedCategories as category>
                                                         <div class="control">
-                                                            <a class="tags has-addons"
+                                                            <a class="tags has-addons tags_bigger"
                                                                href="${servePath}/category/${category.categoryURI}">
                                                                         <span
                                                                                 class="tag">${category.categoryTitle}</span>
@@ -86,8 +86,12 @@
                                                 </h3>
                                                 <div class="field is-grouped is-grouped-multiline">
                                                     <#list tags as tag>
-                                                        <a href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
-                                                           style="font-size:<#if tag.tagTitle?length gt 7> ${tag.tagPublishedRefCount+(tag.tagTitle?length)}<#else>${tag.tagPublishedRefCount+(tag.tagTitle?length)*2}</#if>px"> ${tag.tagTitle}</a>&nbsp;&nbsp;
+                                                        <div class="control">
+															<a class="tags has-addons tags_bigger"
+																href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" >
+															<span class="tag">	${tag.tagTitle}</span>
+															</a>
+                                                        </div>
                                                     </#list>
                                                 </div>
                                             </div>

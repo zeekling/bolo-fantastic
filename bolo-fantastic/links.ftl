@@ -41,21 +41,35 @@
     </@head>
     <style>
         .link-body {
-            position: relative;
             margin: 10px auto;
-            padding: 0;
+			display:inline-block;
+			vertical-align:text-top;
+	        width:305px;
+			text-align: center;
+			background-color:#F8F8F8;
+			height:160px;
+            padding: 5px;
+			border-radius:10px;
             border: 0;
             font-size: 100%;
             font-style: inherit;
             font-weight: inherit;
             outline: 0;
-            vertical-align: baseline;
-            display: flex;
-            flex-direction: row;
         }
-
+		.link-avatar-div{
+			width:90px;
+			height:60px;
+			display:inline-block;
+			margin-buttom:10px;
+		}
+		.link-avatar-div a{
+			margin:auto;
+			width:90px;
+			height:60px;
+		}
         .link-avatar {
             display: block;
+			text-align: center;
             -o-object-fit: cover;
             object-fit: cover;
             border-radius: 100%;
@@ -66,7 +80,10 @@
             -webkit-transition: all .8s;
             transition: all .8s
         }
-
+		.link-content{
+			width:90%;
+			font-size:12px;
+		}
         .link-avatar:hover {
             -webkit-transform: rotate(1turn);
             transform: rotate(1turn)
@@ -76,12 +93,12 @@
             margin-left: 58px;
             border: 0;
             font-size: 100%;
+			width:90%;
             font-style: inherit;
             font-weight: inherit;
             margin: 0;
-            outline: 0;
-            padding: 0;
-            display: flex;
+            padding-top:10px ;
+            display: inline-block;
             flex-direction: column;
             justify-content: center;
             vertical-align: baseline;

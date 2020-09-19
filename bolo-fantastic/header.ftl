@@ -18,6 +18,13 @@
 
 -->
 <style type="text/css">
+.halo-comment .comment-textarea textarea{
+	min-width:600px;
+	display:block;
+}
+.tags_bigger .tag{
+   font-size:13px;
+}
 .user__site {
 	display: inline-block;
 	height: 16px;
@@ -39,7 +46,7 @@
 	height: 178px;
 }
 .card-normal .card .card-image img{
-	margin-left: 15px;
+	margin-left: 20px;
 }
 #search,#search-m{
 	box-shadow: none;

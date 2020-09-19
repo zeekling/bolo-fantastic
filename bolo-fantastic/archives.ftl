@@ -72,7 +72,7 @@
                                                     <#if 0 !=archiveDates?size>
                                                         <#list archiveDates as archiveDate>
                                                             <div class="control">
-                                                                <a class="tags has-addons"
+                                                                <a class="tags has-addons tags_bigger"
                                                                    href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
                                                                             <span
                                                                                     class="tag">${archiveDate.archiveDateYear}
