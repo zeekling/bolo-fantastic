@@ -22,7 +22,7 @@
         <div class="level footer_main">
             <div class="level-start has-text-centered-mobile">
 			        <div>
-                    <#include "../../common-template/macro-user_site.ftl"/>
+                    <#include "./macro-user_site.ftl"/>
 					<@userSite dir="n"/>
 					</div>
                     &copy; ${.now?string('yyyy')} ${blogTitle!} • ${onlineVisitor1Label}${onlineVisitorCnt}
