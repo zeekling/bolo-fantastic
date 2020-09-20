@@ -171,7 +171,7 @@
             </a>
         </#if>
         <#if usite.usiteQQ != ''>
-            <a href="javascript:void" onclick="qq()"
+            <a href="javascript:void(qq())"
                <#if dir==''>title<#else>aria-label</#if>="${usite.usiteQQ}"
                class="<#if dir!=''>vditor-tooltipped__${dir} vditor-tooltipped  </#if>user__site"
                rel="noopener nofollow">
@@ -181,7 +181,7 @@
             </a>
         </#if>
         <#if usite.usiteWeChat != ''>
-            <a href="javascript:void" onclick="wechat()"
+            < href="javascript:void(wechat())"
                class="<#if dir!=''>vditor-tooltipped__${dir} vditor-tooltipped  </#if>user__site"
                <#if dir==''>title<#else>aria-label</#if>="${usite.usiteWeChat}">
                 <svg viewBox="0 0 32 32" width="100%" height="100%">
