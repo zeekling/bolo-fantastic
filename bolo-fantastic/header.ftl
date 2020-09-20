@@ -67,6 +67,9 @@
 .vditor-reset{
 	background-color:white !important;
 }
+.emoji{
+	width:20px;
+}
 </style>
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">

@@ -160,7 +160,7 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
 				   </a>
 				   <div class="media-content">
 				      <div class="content">
-                         <div style="padding-top: 10px;">
+                         <div style="padding-top: 10px;padding-right:10px;">
 							<div class="has-text-grey is-size-7 is-uppercase">
 							   <a href="${comment.commentURL}" rel="nofollow" target="_black">
 							   ${comment.commentName}</a>
