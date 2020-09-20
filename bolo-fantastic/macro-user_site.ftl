@@ -181,7 +181,7 @@
             </a>
         </#if>
         <#if usite.usiteWeChat != ''>
-            < href="javascript:void(wechat())"
+            <a href="javascript:void(wechat())"
                class="<#if dir!=''>vditor-tooltipped__${dir} vditor-tooltipped  </#if>user__site"
                <#if dir==''>title<#else>aria-label</#if>="${usite.usiteWeChat}">
                 <svg viewBox="0 0 32 32" width="100%" height="100%">
