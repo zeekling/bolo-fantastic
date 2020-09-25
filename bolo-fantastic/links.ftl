@@ -44,7 +44,7 @@
             margin: 10px auto;
 			display:inline-block;
 			vertical-align:text-top;
-	        width:305px;
+	        width:230px;
 			text-align: center;
 			background-color:#F8F8F8;
 			height:160px;

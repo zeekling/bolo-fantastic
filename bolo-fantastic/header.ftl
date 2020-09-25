@@ -46,7 +46,7 @@
 	height: 178px;
 }
 .card-normal .card .card-image img{
-	margin-left: 20px;
+	margin-left: 13px;
 }
 #search,#search-m{
 	box-shadow: none;
