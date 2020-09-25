@@ -33,7 +33,6 @@
 					Theme ${skinDirName}
 					<sup>[<a href="https://git.zeekling.cn/zeekling/bolo-skins/src/branch/master/bolo-fantastic"
 					target="_blank">ref</a>]</sup>
-					by <a href="https://www.zeekling.cn" target="_blank">唐墨夏</a>
             </div>
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
 					<#--
