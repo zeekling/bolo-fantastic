@@ -124,13 +124,13 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
     <div class="card widget">
         <div class="card-content">
             <div class="menu">
-                <h3 class="menu-label">
+                <div class="menu-label">
                     ${categoryLabel}
-                </h3>
+                </div>
                 <ul class="menu-list">
                     <#list mostUsedCategories as category>
                         <li>
-                            <a class="level is-marginless" href="${servePath}/category/${category.categoryURI}">
+                            <a class="level is-marginless" href="/category/${category.categoryURI}">
                                       <span class="level-start">
                                           <span class="level-item">${category.categoryTitle}</span>
                                       </span>
@@ -146,12 +146,12 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
     </div>
         <div class="card widget">
            <div class="card-content">
-		      <h3 class="menu-label">
+		      <div class="menu-label">
 			      ${recentCommentsLabel}
-              </h3>
+              </div>
 			   <#list recentComments as comment>
                 <article class="media">
-				   <a href="${servePath}${comment.commentSharpURL}" class="media-left">
+				   <a href="${comment.commentSharpURL}" class="media-left">
 				      <p class="image is-48x48">
 					     <img class="thumbnail" src="${adminUser.userAvatar!}"
 						    data-src="${comment.commentThumbnailURL}"
@@ -168,7 +168,7 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
 							   ${comment.commentDate2?string("yyyy-MM-dd")}
 							</div>
 						 </div>
-						 <a href="${servePath}${comment.commentSharpURL}"
+						 <a href="${comment.commentSharpURL}"
 						     class="title has-link-black-ter is-size-6
 							has-text-weight-normal"> ${comment.commentContent}</a>
 					  </div>
@@ -181,9 +181,9 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
 		<div class="card widget">
 		  <div class="card-content" style="width:100%">
 		      <div class="menu">
-			      <h3 class="menu-label">
+			      <div class="menu-label">
    		            ${noticeBoardLabel}
-				  </h3>
+				  </div>
 				  <ul class="menu-list">
 				    ${noticeBoard}
 				  </ul>
@@ -201,13 +201,13 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
 		</div>
         <div class="card widget">
             <div class="card-content">
-                <h3 class="menu-label">
+                <div class="menu-label">
                     ${mostViewCountArticlesLabel}
-                </h3>
+                </div>
                 <#list mostViewCountArticles as article>
                     <article class="media">
                         <#if article.articleImg1URL?? && article.articleImg1URL!=''>
-                            <a href="${servePath}${article.articlePermalink}" class="media-left">
+                            <a href="${article.articlePermalink}" class="media-left">
                                 <p class="image is-64x64">
                                     <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL!}"
                                          alt="${article.articleTitle!}">
@@ -221,7 +221,7 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
                                     <div class="has-text-grey is-size-7 is-uppercase">${article.articleViewCount}浏览
                                     </div>
                                 </div>
-                                <a href="${servePath}${article.articlePermalink}"
+                                <a href="${article.articlePermalink}"
                                    class="title has-link-black-ter is-size-6 has-text-weight-normal">${article.articleTitle!}</a>
                             </div>
                         </div>
@@ -234,13 +234,13 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
     <div class="card widget">
         <div class="card-content">
             <div class="menu">
-                <h3 class="menu-label">
+                <div class="menu-label">
                     ${tagLabel}
-                </h3>
+                </div>
                 <div class="field is-grouped is-grouped-multiline">
                     <#list mostUsedTags as tag>
                         <div class="control">
-                            <a class="tags has-addons" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+                            <a class="tags has-addons" href="/tags/${tag.tagTitle?url('UTF-8')}">
                                 <span class="tag">${tag.tagTitle}</span>
                                 <span class="tag is-grey">${tag.tagPublishedRefCount!}</span>
                             </a>

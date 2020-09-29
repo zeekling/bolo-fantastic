@@ -74,7 +74,7 @@
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">
         <div class="navbar-brand transparent">
-            <a class="navbar-item navbar-logo" href="${servePath}" rel="start">
+            <a class="navbar-item navbar-logo" href="/" rel="start">
                 <img src="${faviconURL}" alt="${blogTitle!}" height="28"/>
                 &nbsp;${blogTitle!}
             </a>
@@ -87,9 +87,9 @@
         <div id="navMenu" class="navbar-menu transparent">
             <div class="navbar-start transparent">
                 <div class="navbar-start">
-					<a class="navbar-item" href="${servePath}/tags.html"  rel="section">${allTagsLabel}</a>
-					<a class="navbar-item" href="${servePath}/archives.html"  rel="section">${archiveLabel}</a>
-					<a class="navbar-item" href="${servePath}/links.html"  rel="section">${linkLabel}</a>
+					<a class="navbar-item" href="/tags.html"  rel="section">${allTagsLabel}</a>
+					<a class="navbar-item" href="/archives.html"  rel="section">${archiveLabel}</a>
+					<a class="navbar-item" href="/links.html"  rel="section">${linkLabel}</a>
                     <#list pageNavigations as page>
                         <a class="navbar-item" href="${page.pagePermalink}" target="${page.pageOpenTarget}"
                            rel="section">
@@ -102,14 +102,14 @@
             <div class="navbar-end">
 
                 <#if isLoggedIn>
-                    <a class="navbar-item" href="${servePath}/admin-index.do#main" title="${adminLabel}">
+                    <a class="navbar-item" href="/admin-index.do#main" title="${adminLabel}">
                         ${adminLabel}
                     </a>
                     <a class="navbar-item" href="${logoutURL}">
                         ${logoutLabel}
                     </a>
                 <#else>
-                    <a class="navbar-item" href="${servePath}/start">
+                    <a class="navbar-item" href="/start">
                         ${startToUseLabel}
                     </a>
                 </#if>

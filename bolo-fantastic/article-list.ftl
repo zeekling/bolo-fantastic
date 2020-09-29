@@ -32,7 +32,7 @@
                         <div class="blog-slider__wrp swiper-wrapper">
                             <div class="blog-slider__item swiper-slide">
 							 <div class="blog-slider__img">
-							    <a href="${servePath}${article.articlePermalink}">
+							    <a href="${article.articlePermalink}">
 								    <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"  referrerpolicy="origin">
 								</a>
 						     </div>
@@ -41,19 +41,19 @@
                                         <span class="blog-slider__code"
                                             style="display:inline-block">${article.articleUpdateDate?string("yyyy年MM月dd日")}</span>
                                         <#if article.categoryURI??>
-                                            <span><a class="has-link-black-ter"
-                                                    href="${servePath}/category/${article.categoryURI}">${article.articleCategory}</a></span>
+                                            <h1 style="display:inline-block"><a class="has-link-black-ter"
+                                                    href="/category/${article.categoryURI}">${article.articleCategory}</a></h1>
                                         </#if>
                                     </div>
-                                    <div class="blog-slider__title "><a class="title is-5"
-                                            href="${servePath}${article.articlePermalink}">${article.articleTitle!}</a>
-                                    </div>
+                                    <h2 class="blog-slider__title "><a class="title is-5"
+                                            href="${article.articlePermalink}">${article.articleTitle!}</a>
+                                    </h2>
                                     <div class="blog-slider__text" content="">
                                         <#if article.articleAbstractText!?length gt 24>
                                             ${article.articleAbstractText!?substring(0, 24)} ......<#else>
                                                 ${article.articleAbstractText!}</#if>
                                     </div>
-                                    <a href="${servePath}${article.articlePermalink}"
+                                    <a href="${article.articlePermalink}"
                                         class="blog-slider__button">阅读更多</a>
                                 </div>
                             </div>
@@ -64,7 +64,7 @@
                 <#else>
                     <div class="card">
 						 <div class="card-image">
-						   <a href="${servePath}${article.articlePermalink}">
+						   <a href="${article.articlePermalink}">
 						     <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL}" alt="${article.articleTitle!}" referrerpolicy="origin">
 						   </a>
 						 </div>
@@ -74,17 +74,17 @@
                                     <time
                                         class="level-item has-text-grey">${article.articleUpdateDate?string("yyyy年MM月dd日")}</time>
                                     <#if article.articleCategory != "">
-                                        <a class="has-link-black-ter"
-                                            href="${servePath}/category/${article.categoryURI}">${article.articleCategory}</a>
+                                       <h1 style="display:inline-block"> <a class="has-link-black-ter"
+                                            href="/category/${article.categoryURI}">${article.articleCategory}</a></h1>
                                     </#if>
                                 </div>
                             </div>
-                            <h3 class="title is-size-5 is-size-5-mobile has-text-weight-normal">
+                            <h2 class="title is-size-5 is-size-5-mobile has-text-weight-normal">
 
                                 <a class="has-link-black-ter"
-                                    href="${servePath}${article.articlePermalink}">${article.articleTitle!}</a>
+                                    href="${article.articlePermalink}">${article.articleTitle!}</a>
 
-                            </h3>
+                            </h2>
                             <div id="is-hidden-touch" class="content is-hidden-touch">
                                 <#if article.articleAbstractText!?length gt 128>
                                     ${article.articleAbstractText!?substring(0, 128)} ......<#else>
@@ -96,7 +96,7 @@
                                 <div class="level-start">
                                     <div class="level-item">
                                         <a class="button is-size-7 is-light"
-                                            href="${servePath}${article.articlePermalink}">阅读更多</a>
+                                            href="${article.articlePermalink}">阅读更多</a>
                                     </div>
                                 </div>
                             </div>
@@ -119,13 +119,13 @@
 
                     <div class="pagination-previous">
                         <a class="is-flex-grow has-text-black-ter"
-                            href="${servePath}${path}?p=${paginationPreviousPageNum}">上一页</a>
+                            href="${path}?p=${paginationPreviousPageNum}">上一页</a>
                     </div>
                 </#if>
                 <#if paginationCurrentPageNum !=paginationLastPageNum>
                     <div class="pagination-next">
                         <a class="is-flex-grow has-text-black-ter"
-                            href="${servePath}${path}?p=${paginationNextPageNum}">下一页</a>
+                            href="${path}?p=${paginationNextPageNum}">下一页</a>
                     </div>
                 </#if>
 
@@ -136,7 +136,7 @@
                             <li><span class="pagination-link is-current">${paginationPageNum}</span></li>
                             <#else>
                                 <li><a class="pagination-link"
-                                        href="${servePath}${path}?p=${paginationPageNum}">${paginationPageNum}</a></li>
+                                        href="${path}?p=${paginationPageNum}">${paginationPageNum}</a></li>
                         </#if>
                     </#list>
                 </ul>

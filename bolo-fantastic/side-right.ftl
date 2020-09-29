@@ -20,9 +20,9 @@
 <div class="card widget">
   <div class="card-content" style="width:100%">
     <div class="menu">
-	  <h3 class="menu-label">
+	  <div class="menu-label">
 	  ${noticeBoardLabel}
-	  </h3>
+	  </div>
 	  <ul class="menu-list">
 	  ${noticeBoard}
 	  </ul>
@@ -39,14 +39,14 @@
 </div>
 <div class="card widget">
     <div class="card-content">
-        <h3 class="menu-label">
+        <div class="menu-label">
             ${mostViewCountArticlesLabel}
-        </h3>
+        </div>
 
         <#list mostViewCountArticles as article>
             <article class="media">
                 <#if article.articleImg1URL?? && article.articleImg1URL!=''>
-                    <a href="${servePath}${article.articlePermalink}" class="media-left">
+                    <a href="${article.articlePermalink}" class="media-left">
                         <p class="image is-64x64">
                             <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL!}" alt="${article.articleTitle!}">
                         </p>
@@ -60,7 +60,7 @@
                                 ${article.articleViewCount}浏览
                             </div>
                         </div>
-                        <a href="${servePath}${article.articlePermalink}"
+                        <a href="${article.articlePermalink}"
                            class="title has-link-black-ter is-size-6 has-text-weight-normal">${article.articleTitle!}</a>
                     </div>
                 </div>
@@ -72,11 +72,11 @@
 <div class="card widget">
 	<div class="card-content">
 		<div class="menu">
-			<h3 class="menu-label">${tagLabel}</h3>
+			<div class="menu-label">${tagLabel}</div>
 			<div class="field is-grouped is-grouped-multiline">
 			<#list mostUsedTags as tag>
 				<div class="control">
-					<a class="tags has-addons" href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}">
+					<a class="tags has-addons" href="/tags/${tag.tagTitle?url('UTF-8')}">
 						<span class="tag">${tag.tagTitle}</span>
 					    <span class="tag is-grey">${tag.tagPublishedRefCount!}</span>
 					</a>
