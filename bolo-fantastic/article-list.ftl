@@ -79,12 +79,12 @@
                                     </#if>
                                 </div>
                             </div>
-                            <h1 class="title is-size-5 is-size-5-mobile has-text-weight-normal">
+                            <h3 class="title is-size-5 is-size-5-mobile has-text-weight-normal">
 
                                 <a class="has-link-black-ter"
                                     href="${servePath}${article.articlePermalink}">${article.articleTitle!}</a>
 
-                            </h1>
+                            </h3>
                             <div id="is-hidden-touch" class="content is-hidden-touch">
                                 <#if article.articleAbstractText!?length gt 128>
                                     ${article.articleAbstractText!?substring(0, 128)} ......<#else>

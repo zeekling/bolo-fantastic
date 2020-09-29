@@ -25,7 +25,7 @@
                 <div class="level-item has-text-centered" style="flex-shrink: 1">
                     <div class="level">
                         <figure class="image is-64x64 has-mb-6 level-left" style="margin: 0 auto">
-                            <img class="is-rounded" src="${adminUser.userAvatar!}" alt="${userName!}" style="padding: 2px;
+                            <img class="is-rounded" src="${faviconURL}" alt="${blogTitle!}" style="padding: 2px;
 box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
                         </figure>
                         <div class="level-right">
