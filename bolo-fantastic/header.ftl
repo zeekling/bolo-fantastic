@@ -19,7 +19,6 @@
 -->
 <style type="text/css">
 .halo-comment .comment-textarea textarea{
-	min-width:600px;
 	display:block;
 }
 .tags_bigger .tag{

@@ -69,9 +69,10 @@
                                                     <div class="level-item has-text-grey">
                                                        跟新于${article.articleUpdateDate?string("yyyy年MM月dd日")}
                                                     </div>
-                                                    <div class="level-item has-text-grey">
+                                                    <!--<div class="level-item has-text-grey">
                                                        创建于${article.articleCreateDate?string("yyyy年MM月dd日")}
                                                     </div>
+													-->
 													<div>
 													   ${article.articleViewCount} 浏览&nbsp;
 													</div>
