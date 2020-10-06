@@ -92,7 +92,8 @@
                                                     height: 25px !important;
                                                 }
                                             </style>
-                                            <div id="post-article" class="content post-article">
+                                            <div id="post-article" class="content post-article"
+											data-img="${article.articleImg1URL}">
                                                 ${article.articleContent}
                                             </div>
                                             <div class="level is-size-7 is-uppercase">
@@ -187,6 +188,14 @@
                                             }
                                         }, 3000)
                                     })**/
+			$(document).ready(function(){
+				var content = $("#post-article");
+				var img_url = content.attr("data-img");
+				if (content.html().trim().startsWith('<p><a class="gallery-item" href="javascript:void(0)"><img')){
+					var img = content.find("p a").get(0);
+					img.remove();
+				}
+			})
             </script>
         </body>
     </html>

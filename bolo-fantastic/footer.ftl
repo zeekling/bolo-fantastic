@@ -84,7 +84,10 @@ $(document).ready(function(){
 		var img = $(this).find("img");
 		var w = img.width;
 		var h = img.height;
+		var content = $("#post-article");
+		var img_th = content.attr("data-img");
 	    $(this).attr("href","javascript:void(0)");
+
 	});
 	$(".gallery-item").on("click",function(){
         var img = $(this).find("img");
