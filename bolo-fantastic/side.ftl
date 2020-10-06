@@ -68,7 +68,13 @@ box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
                             浏览
                         </p>
                         <p class="title has-text-weight-normal">
-                            ${statistic.statisticBlogViewCount}
+							<#if statistic.statisticBlogViewCount?length gt 5>
+							   <#assign viewCount=statistic.statisticBlogViewCount?number/>
+							   <#assign viewCountWan=viewCount/10000 />
+							   ${viewCountWan?string('#.##')}万
+                            <#else>
+                               ${statistic.statisticBlogViewCount}
+							</#if>
                         </p>
                     </div>
                 </div>
