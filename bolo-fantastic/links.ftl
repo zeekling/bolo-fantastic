@@ -134,7 +134,7 @@
                                                     <#list links as link>
                                                         <div class="link-body">
                                                             <div class="link-avatar-div">
-                                                                <a href="" rel="nofollow"
+                                                                <a href="${link.linkAddress}" rel="nofollow"
                                                                    target="_blank">
                                                                     <img alt="${link.linkDescription}"
                                                                          src="${link.linkIcon}"
