@@ -187,7 +187,7 @@
                                                 }, 1000)
                                             }
                                         }, 3000)
-                                    })**/
+                                    })
 			$(document).ready(function(){
 				var content = $("#post-article");
 				var img_url = content.attr("data-img");
@@ -195,7 +195,7 @@
 					var img = content.find("p a").get(0);
 					img.remove();
 				}
-			})
+			})**/
             </script>
         </body>
     </html>

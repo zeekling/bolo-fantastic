@@ -33,7 +33,9 @@
                             <div class="blog-slider__item swiper-slide">
 							 <div class="blog-slider__img">
 							    <a href="${article.articlePermalink}">
-								    <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"  referrerpolicy="origin">
+								    <img class="thumbnail" src="${adminUser.userAvatar!}" height="250" width="150"
+									data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"
+									referrerpolicy="origin">
 								</a>
 						     </div>
                                 <div class="blog-slider__content">
@@ -65,7 +67,9 @@
                     <div class="card">
 						 <div class="card-image">
 						   <a href="${article.articlePermalink}">
-						     <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL}" alt="${article.articleTitle!}" referrerpolicy="origin">
+						     <img class="thumbnail" src="${adminUser.userAvatar!}" height="250" width="150"
+							 data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"
+							 referrerpolicy="origin">
 						   </a>
 						 </div>
                         <div class="card-content article " id="card-content" style="width: 100%">

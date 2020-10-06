@@ -31,8 +31,6 @@
 					<br>
                     Powered by <a href="https://github.com/AdlerED/bolo-solo" target="_blank">Bolo</a>
 					Theme ${skinDirName}
-					<sup>[<a href="https://git.zeekling.cn/zeekling/bolo-skins/src/branch/master/bolo-fantastic"
-					target="_blank">ref</a>]</sup>
             </div>
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
 					<#--
@@ -49,6 +47,7 @@
 <script src="${staticServePath}/js/common${miniPostfix}.js?${staticResourceVersion}"></script>
 <script src="${staticServePath}/skins/${skinDirName}/js/common${miniPostfix}.js?${staticResourceVersion}"></script>
 <script src="${staticServePath}/skins/${skinDirName}/js/layer.js?${staticResourceVersion}"></script>
+<script src="${staticServePath}/skins/${skinDirName}/js/lazyload.js?${staticResourceVersion}"></script>
 <script type="text/javascript" >
 
 $(document).ready(function(){
@@ -66,7 +65,7 @@ $(document).ready(function(){
 		if (ctrlDown && (e.keyCode == cKey)) {
 			layer.open({
 				title:"${blogTitle!}友情提示",
-				content:"您复制了本站内容,转载请注明来源。",
+				content:"您复制了本站内容,转载请注明来源:<a href=\"\">${blogTitle!}</a>。",
 				anim:4
 			});
 		}
@@ -75,7 +74,7 @@ $(document).ready(function(){
 	document.oncopy = function(){
 		layer.open({
 			title:"${blogTitle!}友情提示",
-			content:"您复制了本站内容,转载请注明来源。",
+			content:"您复制了本站内容,转载请注明来源:<a href=\"\">${blogTitle!}</a>。",
 			anim:4
 		});
 	}
@@ -84,10 +83,7 @@ $(document).ready(function(){
 		var img = $(this).find("img");
 		var w = img.width;
 		var h = img.height;
-		var content = $("#post-article");
-		var img_th = content.attr("data-img");
 	    $(this).attr("href","javascript:void(0)");
-
 	});
 	$(".gallery-item").on("click",function(){
         var img = $(this).find("img");
@@ -100,7 +96,9 @@ $(document).ready(function(){
 
 	$(".thumbnail").each(function(){
 		var src = $(this).attr("data-src");
+		$(this).attr("data-original", src);
 		$(this).attr("src", src);
+		$(this).lazyload();
 	});
 });
 

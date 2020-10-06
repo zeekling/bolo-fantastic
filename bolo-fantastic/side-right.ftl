@@ -48,7 +48,8 @@
                 <#if article.articleImg1URL?? && article.articleImg1URL!=''>
                     <a href="${article.articlePermalink}" class="media-left">
                         <p class="image is-64x64">
-                            <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL!}" alt="${article.articleTitle!}">
+                            <img class="thumbnail" src="${adminUser.userAvatar!}"width="48" height="48"
+							data-src="${article.articleImg1URL!}" alt="${article.articleTitle!}">
                         </p>
                     </a>
                 </#if>
