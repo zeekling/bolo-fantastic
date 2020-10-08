@@ -30,6 +30,16 @@
                         </figure>
                         <div class="level-right">
                             <div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <nav class="level is-mobile" style="margin-bottom:0px ;">
+                <div class="level-item has-text-centered" style="flex-shrink: 1">
+                    <div class="level">
+                        <div class="level-right">
+                            <div>
                                 <p class="title is-4" style="text-align: center">
                                     ${blogTitle!}
                                 </p>
@@ -80,50 +90,6 @@
                 </div>
             </nav>
             <div class="level is-mobile">
-                <#if usite??>
-                    <#if usite.usiteQQ !=''>
-                        <span class="level-item button is-marginless" target="_blank" title="QQ"
-                           onclick="qq()">
-						   <i class="fab fa-qq"></i>
-                        </span>
-                    </#if>
-                    <#if usite.usiteWeChat !=''>
-                        <span class="level-item button is-marginless" target="_blank" title="WeChat"
-                           onclick="wechat()">
-                            <i class="fab fa-weixin"></i>
-                        </span>
-                    </#if>
-                    <#if usite.usiteWeiBo !=''>
-                        <a class="level-item button is-marginless" target="_blank" title="Weibo"
-                           href="https://weibo.com/${usite.usiteWeiBo}">
-                            <i class="fab fa-weibo"></i>
-                        </a>
-                    </#if>
-                    <#if usite.usiteGitHub !=''>
-                        <a class="level-item button is-marginless" target="_blank" title="Github"
-                           href="https://github.com/${usite.usiteGitHub}">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </#if>
-                    <#if usite.usiteTwitter !=''>
-                        <a class="level-item button is-marginless" target="_blank" title="Twitter"
-                           href="https://twitter.com/${usite.usiteTwitter}">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                    </#if>
-                    <#if usite.usiteFacebook !=''>
-                        <a class="level-item button is-marginless" target="_blank" title="Facebook"
-                           href="https://www.facebook.com/${usite.usiteFacebook}">
-                            <i class="fab fa-facebook"></i>
-                        </a>
-                    </#if>
-                    <#if usite.usiteTelegram !=''>
-                        <a class="level-item button is-marginless" target="_blank" title="Telegram"
-                           href="https://telegram.me/${usite.usiteTelegram}">
-                            <i class="fab fa-telegram"></i>
-                        </a>
-                    </#if>
-                </#if>
             </div>
         </div>
     </div>
