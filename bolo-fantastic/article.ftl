@@ -47,6 +47,9 @@
                      <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/swiper.min.css">
         <script src='https://www.zeekling.cn/cdn/js/swiper.min.js'></script>
             </@head>
+			<style type="text/css">
+
+			</style>
             <#-- <#include "style.theme.ftl"> -->
         </head>
             <body class="is-3-column">
@@ -187,7 +190,7 @@
                                                 }, 1000)
                                             }
                                         }, 3000)
-                                    })
+                                    })**/
 			$(document).ready(function(){
 				var content = $("#post-article");
 				var img_url = content.attr("data-img");
@@ -195,7 +198,7 @@
 					var img = content.find("p a").get(0);
 					img.remove();
 				}
-			})**/
+			})
             </script>
         </body>
     </html>

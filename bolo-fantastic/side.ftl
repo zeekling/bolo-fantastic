@@ -142,7 +142,7 @@
 						 </div>
 						 <a href="${comment.commentSharpURL}"
 						     class="title has-link-black-ter is-size-6
-							has-text-weight-normal"> ${comment.commentContent}</a>
+							has-text-weight-normal" style="background-color:#f7f7f7 !important;"> ${comment.commentContent}</a>
 					  </div>
 				   </div>
 				</article>
