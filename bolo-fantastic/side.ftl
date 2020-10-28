@@ -81,7 +81,7 @@
 							<#if statistic.statisticBlogViewCount?length gt 5>
 							   <#assign viewCount=statistic.statisticBlogViewCount?number/>
 							   <#assign viewCountWan=viewCount/10000 />
-							   ${viewCountWan?string('#.##')}万
+							   ${viewCountWan?string('#.##')}w
                             <#else>
                                ${statistic.statisticBlogViewCount}
 							</#if>
