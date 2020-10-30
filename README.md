@@ -1,12 +1,29 @@
 ## 简介
 
-迁移到bolo 博客，保存自己自定义的皮肤部分。
-
-皮肤样例：
-- [bolo-fantastic](https://www.zeekling.cn/?skin=bolo-fantastic)
-- [bolo-NeoEase](https://www.zeekling.cn/?skin=bolo-NeoEase-mod)
+此项目是本人对bolo-fantastic进行了一些改造，包括样式和seo两方面。
 
 个人站点：[小令童鞋](https://www.zeekling.cn/)
+
+## 使用
+
+- 将本项目下载到：`/dockerData/bolo/bolo-fantastic`下面
+
+- 参照下面脚本新建bolo镜像。
+```sh
+docker run --detach --name bolo --network=host  \
+    --env RUNTIME_DB="MYSQL" \
+    --env JAVA_OPTS="-Xms265m -Xmx265m -Xmn170m -Xloggc:/var/log/gc.log" \
+    --env JDBC_USERNAME="root" \
+    --env JDBC_PASSWORD="123456" \
+    --env JDBC_DRIVER="com.mysql.cj.jdbc.Driver" \
+    --env SERVER_HOST="www.zeekling.cn" \
+	--env SERVER_PORT="443" \
+    --env SERVER_SCHEME="https" \
+    --env JDBC_URL="jdbc:mysql://127.0.0.1:3306/solo?useUnicode=yes&characterEncoding=UTF-8&allowPublicKeyRetrieval=true&useSSL=false&serverTimezone=UTC" \
+    -v /dockerData/bolo/bolo-fantastic:/opt/bolo/skins/bolo-fantastic \
+    zeek/bolo \
+        --lute_http=http://127.0.0.1:8249
+```
 
 ## 个站样式
 
