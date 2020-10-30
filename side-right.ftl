@@ -21,7 +21,7 @@
   <div class="card-content" style="width:100%">
     <div class="menu">
 	  <div class="menu-label">
-	  ${noticeBoardLabel}
+	 ${blogTitle!}-${noticeBoardLabel}
 	  </div>
 	  <ul class="menu-list">
 	  ${noticeBoard}
