@@ -40,7 +40,7 @@
 <div class="card widget">
     <div class="card-content">
         <div class="menu-label">
-            ${mostViewCountArticlesLabel}
+           ${blogTitle!}-${mostViewCountArticlesLabel}
         </div>
 
         <#list mostViewCountArticles as article>
@@ -73,7 +73,7 @@
 <div class="card widget">
 	<div class="card-content">
 		<div class="menu">
-			<div class="menu-label">${tagLabel}</div>
+			<div class="menu-label">${blogTitle!}-${tagLabel}</div>
 			<div class="field is-grouped is-grouped-multiline">
 			<#list mostUsedTags as tag>
 				<div class="control">

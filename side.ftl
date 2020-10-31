@@ -97,7 +97,7 @@
         <div class="card-content">
             <div class="menu">
                 <div class="menu-label">
-                    ${categoryLabel}
+                    ${blogTitle!}-${categoryLabel}
                 </div>
                 <ul class="menu-list">
                     <#list mostUsedCategories as category>
@@ -119,7 +119,7 @@
         <div class="card widget">
            <div class="card-content">
 		      <div class="menu-label">
-			      ${recentCommentsLabel}
+			      ${blogTitle!}-${recentCommentsLabel}
               </div>
 			   <#list recentComments as comment>
                 <article class="media">
@@ -154,7 +154,7 @@
 		  <div class="card-content" style="width:100%">
 		      <div class="menu">
 			      <div class="menu-label">
-   		            ${noticeBoardLabel}
+   		            ${blogTitle!}-${noticeBoardLabel}
 				  </div>
 				  <ul class="menu-list">
 				    ${noticeBoard}
@@ -207,7 +207,7 @@
         <div class="card-content">
             <div class="menu">
                 <div class="menu-label">
-                    ${tagLabel}
+                    ${blogTitle!}-${tagLabel}
                 </div>
                 <div class="field is-grouped is-grouped-multiline">
                     <#list mostUsedTags as tag>
