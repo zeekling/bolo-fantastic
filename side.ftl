@@ -122,7 +122,7 @@
 			      ${blogTitle!}-${recentCommentsLabel}
               </div>
 			   <#list recentComments as comment>
-                <article class="media">
+                <article class="media media-comment">
 				   <a href="${comment.commentSharpURL}" class="media-left">
 				      <p class="image is-48x48">
 					     <img class="thumbnail" src="${adminUser.userAvatar!}"

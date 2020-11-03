@@ -69,7 +69,7 @@
 .emoji{
 	width:20px;
 }
-.media-content {
+.media-comment .media-content {
 	max-width: 170px;
 	overflow: hidden;
 	max-height: 90px;
