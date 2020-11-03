@@ -69,6 +69,11 @@
 .emoji{
 	width:20px;
 }
+.media-content {
+	max-width: 170px;
+	overflow: hidden;
+	max-height: 90px;
+}
 </style>
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">
