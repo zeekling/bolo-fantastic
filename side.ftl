@@ -136,7 +136,7 @@
 							<div class="has-text-grey is-size-7 is-uppercase">
 							   <a href="${comment.commentURL}" rel="nofollow" target="_black">
 							   ${comment.commentName}</a>
-							   评论于
+							   at
 							   ${comment.commentDate2?string("yyyy-MM-dd")}
 							</div>
 						 </div>
