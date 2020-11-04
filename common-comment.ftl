@@ -57,7 +57,7 @@
                       class="comment-time">
                     ${comment.commentDate2?string("yyyy-MM-dd HH:mm")}
                 </time>
-                <a href="#li-comment-${comment.oId}" class="comment-id">#${comment.oId}</a></div>
+                <a href="#li-comment-${comment.oId}" class="comment-id" style="display:none">#${comment.oId}</a></div>
             <style>
                 .comment-content .emoji {
                     width: 25px !important;
