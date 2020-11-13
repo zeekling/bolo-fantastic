@@ -25,7 +25,7 @@
 					<br>
 					${footerContent}
 					<br>
-                    Powered by <a href="https://github.com/AdlerED/bolo-solo" target="_blank">Bolo</a>
+                    Powered by <a href="https://doc.stackoverflow.wiki/web/#/7?page_id=87" target="_blank">Bolo</a>
 					Theme ${skinDirName}
             </div>
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
