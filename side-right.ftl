@@ -87,3 +87,23 @@
 		</div>
 	</div>
 </div>
+<div class="card widget">
+	<div class="card-content" style="width:100%">
+		<div class="menu">
+			<h3 class="menu-label">广告</h3>
+				<ul class="menu-list">
+				<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+				<!-- google广告 -->
+				<ins class="adsbygoogle"
+					style="display:block"
+					data-ad-client="ca-pub-1331219010215317"
+					data-ad-slot="5542691247"
+					data-ad-format="auto"
+					data-full-width-responsive="true"></ins>
+				<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+				</script>
+				</ul>
+		</div>
+	</div>
+</div>
