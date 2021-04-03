@@ -156,16 +156,15 @@
             </div>
             <a id="back-to-top" title="返回顶部" href="javascript:"><i class="fas fa-chevron-up"></i></a>
             <#include "footer.ftl">
-            <@comment_script oId=article.oId commentable=article.commentable>
-                page.tips.externalRelevantArticlesDisplayCount =
-                    "${externalRelevantArticlesDisplayCount}";
-                <#if 0 !=randomArticlesDisplayCount>
-                    page.loadRandomArticles('<h3>${randomArticlesLabel}</h3>');
-                </#if>
-                <#if 0 !=relevantArticlesDisplayCount>
-                    page.loadRelevantArticles('${article.oId}', '<h3>${relevantArticlesLabel}</h3>');
-                </#if>
-            </@comment_script>
+			<@comment_script oId=article.oId commentable=article.commentable>
+			   <#if 0 !=randomArticlesDisplayCount>
+			      page.loadRandomArticles('<h3>${randomArticlesLabel}</h3>');
+			   </#if>
+			   <#if 0 !=relevantArticlesDisplayCount>
+			       page.loadRelevantArticles('${article.oId}','<h3>${relevantArticlesLabel}</h3>');
+               </#if>
+			   Skin.initArticle()
+			</@comment_script>
             <script>
                 // 延时检测右侧 “相关阅读” 是否为空，如果空则删除空 div，好看些
 				/**
