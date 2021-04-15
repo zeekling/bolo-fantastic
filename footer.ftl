@@ -21,6 +21,9 @@
     <div class="container">
         <div class="level footer_main">
             <div class="level-start has-text-centered-mobile">
+                    <#include "../../common-template/macro-user_site.ftl"/>
+					<@userSite dir="n"/>
+					<br>
                     &copy; ${.now?string('yyyy')} ${blogTitle!} • ${onlineVisitor1Label}${onlineVisitorCnt}
 					<br>
 					${footerContent}
@@ -29,10 +32,6 @@
 					Theme ${skinDirName}
             </div>
                 <div class="field has-addons is-flex-center-mobile has-mt-5-mobile is-flex-wrap is-flex-middle">
-					<#--
-                    <#include "../../common-template/macro-user_site.ftl"/>
-					<@userSite dir="n"/>
-					-->
                 </div>
             </div>
         </div>
