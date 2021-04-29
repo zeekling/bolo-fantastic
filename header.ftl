@@ -74,6 +74,10 @@
 	overflow: hidden;
 	max-height: 90px;
 }
+.halo-comment {
+   min-width: 300px;
+}
+
 </style>
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">
