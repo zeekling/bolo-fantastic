@@ -8,6 +8,18 @@
 
 - 将本项目下载到：`/dockerData/bolo/bolo-fantastic`下面
 
+- 将[https://git.zeekling.cn/linux/dockerFiles/src/branch/master/bolo](https://git.zeekling.cn/linux/dockerFiles/src/branch/master/bolo)
+  下面的dockerFiles和 settings.xml放置到博客bolo-solo的下面，执行下面命令编译并导出镜像：
+
+  ```sh
+ docker build -t "zeek/bolo" .
+ docker save -o /tmp/zeek_bolo.tar zeek/bolo
+  ```
+- 将`/tmp/zeek_bolo.tar`上传到服务器`/tmp`目录下面，并且导入：
+```sh
+docker load --input=/tmp/zeek_bolo.tar
+```
+
 - 参照下面脚本新建bolo镜像。
 ```sh
 docker stop bolo
