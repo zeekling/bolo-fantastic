@@ -103,6 +103,9 @@
             justify-content: center;
             vertical-align: baseline;
         }
+       .level .google-auto-placed {
+	      display:none;
+       }
     </style>
 
     <#-- <#include "style.theme.ftl"> -->
