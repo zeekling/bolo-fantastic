@@ -569,7 +569,7 @@
                     <section role="form" class="comment-editor">
                         <div class="inner">
                             <div class="commentator">
-                                <img src="https://pic.stackoverflow.wiki/uploadImages/114/246/231/87/2020/06/06/02/26/65e10ea4-41e0-4da8-82fa-a00da2770ce2.png"
+                                <img src="https://img.zeekling.cn/images/2021/09/25/674dd6f711c66ec631a05c00a21a080a.png"
                                      class="avatar">
                             </div>
                             <form class="comment-form">
