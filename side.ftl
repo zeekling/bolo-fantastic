@@ -190,7 +190,15 @@
                             <div class="content">
                                 <div style="padding-top: 10px;">
 
-                                    <div class="has-text-grey is-size-7 is-uppercase">${article.articleViewCount}浏览
+                                    <div class="has-text-grey is-size-7 is-uppercase">
+								     <#assign viewCountStr=article.articleViewCount?string('#.###')/>
+									 <#if viewCountStr?length gt 3>
+									    <#assign viewCount=viewCountStr?number/>
+										<#assign viewCountK=viewCount/1000 />
+										${viewCountK?string('#.##')}K 浏览
+									<#else>
+									  ${article.articleViewCount}浏览
+                                    </#if>
                                     </div>
                                 </div>
                                 <a href="${article.articlePermalink}"
