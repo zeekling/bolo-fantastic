@@ -69,29 +69,29 @@
                                             </h1>
                                             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                                                 <div class="level-left">
-                                                    <div class="level-item has-text-grey">
-                                                       ${article.articleUpdateDate?string("yyyy.MM.dd")} 最后跟新
-                                                    </div>
                                                     <!--<div class="level-item has-text-grey">
-                                                       ${article.articleCreateDate?string("yyyy.MM.dd")} 创建
+                                                       ${article.articleUpdateDate?string("yyyy.MM.dd")}
                                                     </div>-->
-													<div>
+                                                    <div class="level-item has-text-grey">
+                                                       ${article.articleCreateDate?string("yyyy.MM.dd")}
+                                                    </div>
+													<div>浏览
 													  <#assign viewCountStr=article.articleViewCount?string('#.###')/>
 													  <#if viewCountStr?length gt 3>
 													     <#assign viewCount=viewCountStr?number/>
 													     <#assign viewCountK=viewCount/1000 />
-													     ${viewCountK?string('#.##')}K 浏览&nbsp;
+													     ${viewCountK?string('#.##')}K
 													   <#else>
-													      ${article.articleViewCount} 浏览&nbsp;
-													   </#if>
+													      ${article.articleViewCount}
+													   </#if>&nbsp;
 													</div>
 													<div>
 													   <#if article.articleCommentCount != 0>
-												          &nbsp;<a href="#comments">${article.articleCommentCount} 评论&nbsp;</a>
+												          评论&nbsp;<a href="#comments">${article.articleCommentCount} </a>
 											           </#if>
 													</div>
                                                     <div class="level-item has-text-grey">
-                                                        &nbsp;${article.articleCategory}
+                                                        &nbsp;分类:&nbsp;${article.articleCategory}
                                                     </div>
                                                 </div>
                                             </div>

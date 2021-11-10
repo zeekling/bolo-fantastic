@@ -77,6 +77,9 @@
 .halo-comment {
    min-width: 300px;
 }
+.blog-slider__content{
+	font-size: 12px;
+}
 
 </style>
 <nav class="navbar navbar-main  is-paddingless ">

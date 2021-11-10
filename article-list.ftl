@@ -41,7 +41,16 @@
                                 <div class="blog-slider__content">
                                     <div>
                                         <span class="blog-slider__code"
-                                            style="display:inline-block">${article.articleCreateDate?string("yyyy年MM月dd日")}</span>
+                                            style="display:inline-block">${article.articleCreateDate?string("yyyy.MM.dd")}</span>
+										&nbsp;浏览
+										<#assign viewCountStr=article.articleViewCount?string('#.###')/>
+										<#if viewCountStr?length gt 3>
+										    <#assign viewCount=viewCountStr?number/>
+											<#assign viewCountK=viewCount/1000 />
+											    ${viewCountK?string('#.##')}K
+										<#else>
+										    ${article.articleViewCount}
+										</#if>&nbsp;
                                         <#if article.categoryURI??>
                                             <h1 style="display:inline-block"><a class="has-link-black-ter"
                                                     href="/category/${article.categoryURI}">${article.articleCategory}</a></h1>
@@ -51,8 +60,8 @@
                                             href="${article.articlePermalink}">${article.articleTitle!}</a>
                                     </h2>
                                     <div class="blog-slider__text" content="">
-                                        <#if article.articleAbstractText!?length gt 24>
-                                            ${article.articleAbstractText!?substring(0, 24)} ......<#else>
+                                        <#if article.articleAbstractText!?length gt 40>
+                                            ${article.articleAbstractText!?substring(0, 40)} ......<#else>
                                                 ${article.articleAbstractText!}</#if>
                                     </div>
                                     <a href="${article.articlePermalink}"
@@ -76,7 +85,16 @@
                             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                                 <div class="level-left">
                                     <time
-                                        class="level-item has-text-grey">${article.articleCreateDate?string("yyyy年MM月dd日")}</time>
+                                        class="level-item has-text-grey">${article.articleCreateDate?string("yyyy.MM.dd")}</time>
+										&nbsp;浏览
+										<#assign viewCountStr=article.articleViewCount?string('#.###')/>
+										<#if viewCountStr?length gt 3>
+										    <#assign viewCount=viewCountStr?number/>
+											<#assign viewCountK=viewCount/1000 />
+											    ${viewCountK?string('#.##')}K
+										<#else>
+										    ${article.articleViewCount}
+										</#if>&nbsp;
                                     <#if article.articleCategory != "">
                                        <h1 style="display:inline-block"> <a class="has-link-black-ter"
                                             href="/category/${article.categoryURI}">${article.articleCategory}</a></h1>
