@@ -163,7 +163,7 @@
 		  </div>
 		</div>
 		<div class="card widget">
-		    <div class="card-content" style="width:100%">
+		    <div class="card-content" style="width:100%;min-width:300px">
 				<div class="menu">
 					&nbsp;<input type="text" required="required" value="" name="s" id="search-m"
 						onkeydown="enterSearch(event)">&nbsp;

@@ -30,7 +30,7 @@
   </div>
 </div>
 <div class="card widget">
-	<div class="card-content" style="width:100%">
+	<div class="card-content" style="width:100%;min-width:300px">
 		<div class="menu">
 			<input type="text" required="required" value="" name="s" id="search" onkeydown="enterSearch(event)">
 	    	<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search()">
