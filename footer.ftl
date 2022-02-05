@@ -17,6 +17,13 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
+
+<style type="text/css">
+.container {
+	max-width: 1280px;
+}
+</style>
+
 <footer class="footer">
     <div class="container">
         <div class="level footer_main">

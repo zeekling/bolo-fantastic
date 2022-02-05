@@ -56,16 +56,16 @@
                                                     href="/category/${article.categoryURI}">${article.articleCategory}</a></h1>
                                         </#if>
                                     </div>
-                                    <h2 class="blog-slider__title "><a class="title is-5"
+                                    <h2 class="blog-slider__title "><a class="title is-6"
                                             href="${article.articlePermalink}">${article.articleTitle!}</a>
                                     </h2>
-                                    <div class="blog-slider__text" content="">
-                                        <#if article.articleAbstractText!?length gt 40>
-                                            ${article.articleAbstractText!?substring(0, 40)} ......<#else>
+                                    <div class="blog-slider__text is-size-6" content="" >
+                                        <#if article.articleAbstractText!?length gt 48>
+                                            ${article.articleAbstractText!?substring(0, 48)} <#else>
                                                 ${article.articleAbstractText!}</#if>
                                     </div>
                                     <a href="${article.articlePermalink}"
-                                        class="blog-slider__button">阅读更多</a>
+                                        class="button is-size-7 is-light">阅读更多</a>
                                 </div>
                             </div>
                         </div>
@@ -76,7 +76,7 @@
                     <div class="card">
 						 <div class="card-image">
 						   <a href="${article.articlePermalink}">
-						     <img class="thumbnail" src="${adminUser.userAvatar!}" height="250" width="150"
+						     <img class="thumbnail" src="${adminUser.userAvatar!}" height="200" width="100"
 							 data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"
 							 referrerpolicy="origin">
 						   </a>
@@ -107,11 +107,11 @@
                                     href="${article.articlePermalink}">${article.articleTitle!}</a>
 
                             </h2>
-                            <div id="is-hidden-touch" class="content is-hidden-touch">
+                            <div id="is-hidden-touch" class="content is-hidden-touch is-size-6">
                                 <#if article.articleAbstractText!?length gt 128>
-                                    ${article.articleAbstractText!?substring(0, 128)} ......<#else>
+                                    ${article.articleAbstractText!?substring(0, 110)} <#else>
                                         ${article.articleAbstractText!}</#if>
-                                <#-- ${article.articleAbstractText!?substring(0, 128)} ...... -->
+                                <#-- ${article.articleAbstractText!?substring(0, 110)} ...... -->
                             </div>
 
                             <div class="level is-mobile">
@@ -166,3 +166,11 @@
             </nav>
         </div>
     </div>
+
+<style type="text/css">
+.blog-slider__img {
+	margin-left: 20px;
+	width: 240px;
+	height: 150px;
+}
+</style>

@@ -48,7 +48,11 @@
         <script src='https://www.zeekling.cn/cdn/js/swiper.min.js'></script>
             </@head>
 			<style type="text/css">
-
+			.columns {
+				margin-left: 3.25rem;
+				margin-right: -0.75rem;
+				margin-top: -0.75rem;
+			}
 			</style>
             <#-- <#include "style.theme.ftl"> -->
         </head>
@@ -101,8 +105,7 @@
                                                     height: 25px !important;
                                                 }
                                             </style>
-                                            <div id="post-article" class="content post-article"
-											data-img="${article.articleImg1URL}">
+                                            <div id="post-article" class="content post-article" >
                                                 ${article.articleContent}
                                             </div>
                                             <div class="level is-size-7 is-uppercase">
