@@ -49,7 +49,7 @@
             </@head>
 			<style type="text/css">
 			.columns {
-				margin-left: 3.25rem;
+				margin-left: 0.25rem;
 				margin-right: -0.75rem;
 				margin-top: -0.75rem;
 			}
