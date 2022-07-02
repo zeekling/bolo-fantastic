@@ -24,10 +24,10 @@
             <nav class="level">
                 <div class="level-item has-text-centered" style="flex-shrink: 1">
                     <div class="level">
-                        <figure class="image is-64x64 has-mb-6 level-left" style="margin: 0 auto">
+                       <!-- <figure class="image is-64x64 has-mb-6 level-left" style="margin: 0 auto">
                             <img class="is-rounded" src="${faviconURL}" alt="${blogTitle!}" height="48" width="48"
 							style="padding: 2px; box-shadow: 0 1px 2px 0 rgba(0,0,0,0.1);">
-                        </figure>
+                        </figure> -->
                         <div class="level-right">
                             <div>
                             </div>
@@ -123,15 +123,7 @@
               </div>
 			   <#list recentComments as comment>
                 <article class="media media-comment">
-				   <a href="${comment.commentSharpURL}" class="media-left">
-				      <p class="image is-48x48">
-					     <img class="thumbnail" src="${adminUser.userAvatar!}"
-						    data-src="${comment.commentThumbnailURL}"
-						    alt="${comment.commentName}">
-					 </p>
-				   </a>
-				   <div class="media-content">
-				      <div class="content">
+				   <div class="media-content" style="padding-left:20px;">
                          <div style="padding-top: 10px;padding-right:10px;">
 							<div class="has-text-grey is-size-7 is-uppercase">
 							   <a href="${comment.commentURL}" rel="nofollow" target="_black">
@@ -143,7 +135,6 @@
 						 <a href="${comment.commentSharpURL}"
 						     class="title has-link-black-ter is-size-6
 							has-text-weight-normal" style="background-color:#f7f7f7 !important;"> ${comment.commentContent}</a>
-					  </div>
 				   </div>
 				</article>
 			  </#list>
@@ -178,14 +169,6 @@
                 </div>
                 <#list mostViewCountArticles as article>
                     <article class="media">
-                        <#if article.articleImg1URL?? && article.articleImg1URL!=''>
-                            <a href="${article.articlePermalink}" class="media-left">
-                                <p class="image is-64x64">
-                                    <img class="thumbnail" src="${adminUser.userAvatar!}" data-src="${article.articleImg1URL!}"
-                                         alt="${article.articleTitle!}">
-                                </p>
-                            </a>
-                        </#if>
                         <div class="media-content">
                             <div class="content">
                                 <div style="padding-top: 10px;">

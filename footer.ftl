@@ -22,6 +22,10 @@
 .container {
 	max-width: 1280px;
 }
+.media-comment .media-content {
+	max-width: 240px;
+	max-height: 130px;
+}
 </style>
 
 <footer class="footer">

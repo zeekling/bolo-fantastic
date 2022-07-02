@@ -31,13 +31,6 @@
                     <div class="blog-slider card">
                         <div class="blog-slider__wrp swiper-wrapper">
                             <div class="blog-slider__item swiper-slide">
-							 <div class="blog-slider__img">
-							    <a href="${article.articlePermalink}">
-								    <img class="thumbnail" src="${adminUser.userAvatar!}" height="250" width="150"
-									data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"
-									referrerpolicy="origin">
-								</a>
-						     </div>
                                 <div class="blog-slider__content">
                                     <div>
                                         <span class="blog-slider__code"
@@ -60,8 +53,8 @@
                                             href="${article.articlePermalink}">${article.articleTitle!}</a>
                                     </h2>
                                     <div class="blog-slider__text is-size-6" content="" >
-                                        <#if article.articleAbstractText!?length gt 48>
-                                            ${article.articleAbstractText!?substring(0, 48)} <#else>
+                                        <#if article.articleAbstractText!?length gt 150>
+                                            ${article.articleAbstractText!?substring(0, 150)} <#else>
                                                 ${article.articleAbstractText!}</#if>
                                     </div>
                                     <a href="${article.articlePermalink}"
@@ -74,13 +67,6 @@
                 </div>
                 <#else>
                     <div class="card">
-						 <div class="card-image">
-						   <a href="${article.articlePermalink}">
-						     <img class="thumbnail" src="${adminUser.userAvatar!}" height="200" width="100"
-							 data-src="${article.articleImg1URL}" alt="${article.articleTitle!}"
-							 referrerpolicy="origin">
-						   </a>
-						 </div>
                         <div class="card-content article " id="card-content" style="width: 100%">
                             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                                 <div class="level-left">
@@ -108,10 +94,9 @@
 
                             </h2>
                             <div id="is-hidden-touch" class="content is-hidden-touch is-size-6">
-                                <#if article.articleAbstractText!?length gt 128>
-                                    ${article.articleAbstractText!?substring(0, 110)} <#else>
+                                <#if article.articleAbstractText!?length gt 200>
+                                    ${article.articleAbstractText!?substring(0, 200)} <#else>
                                         ${article.articleAbstractText!}</#if>
-                                <#-- ${article.articleAbstractText!?substring(0, 110)} ...... -->
                             </div>
 
                             <div class="level is-mobile">

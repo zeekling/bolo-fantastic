@@ -45,31 +45,11 @@
 
         <#list mostViewCountArticles as article>
             <article class="media">
-                <#if article.articleImg1URL?? && article.articleImg1URL!=''>
-                    <a href="${article.articlePermalink}" class="media-left">
-                        <p class="image is-64x64">
-                            <img class="thumbnail" src="${adminUser.userAvatar!}"width="48" height="48"
-							data-src="${article.articleImg1URL!}" alt="${article.articleTitle!}">
-                        </p>
-                    </a>
-                </#if>
                 <div class="media-content">
                     <div class="content">
-                        <div style="padding-top: 10px;">
-
-                            <div class="has-text-grey is-size-7 is-uppercase">
-                            <#assign viewCountStr=article.articleViewCount?string('#.###')/>
-							<#if viewCountStr?length gt 3>
-							    <#assign viewCount=viewCountStr?number/>
-								<#assign viewCountK=viewCount/1000 />
-								${viewCountK?string('#.##')}K 浏览
-							<#else>
-							    ${article.articleViewCount}浏览
-							 </#if>
-                            </div>
+                        <div style="padding-top: 10px;padding-left:20px;" >
+                            <a href="${article.articlePermalink}" class="">${article.articleTitle!}</a>
                         </div>
-                        <a href="${article.articlePermalink}"
-                           class="title has-link-black-ter is-size-6 has-text-weight-normal">${article.articleTitle!}</a>
                     </div>
                 </div>
             </article>
