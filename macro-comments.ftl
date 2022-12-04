@@ -569,8 +569,7 @@
                     <section role="form" class="comment-editor">
                         <div class="inner">
                             <div class="commentator">
-                                <img src="https://img.zeekling.cn/images/2021/09/25/674dd6f711c66ec631a05c00a21a080a.png"
-                                     class="avatar">
+                                <img src="https://pan.zeekling.cn/cdn/images/comment.png" class="avatar">
                             </div>
                             <form class="comment-form">
                                 <div class="author-info">
