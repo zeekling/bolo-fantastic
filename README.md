@@ -1,6 +1,6 @@
 ## 简介
 
-此项目是本人对bolo-fantastic进行了一些改造，包括样式和seo两方面。
+此项目是本人对bolo-fantastic进行了一些改造,包括样式和seo两方面。
 
 个人站点：[小令童鞋](https://www.zeekling.cn/)
 
@@ -9,7 +9,7 @@
 - 将本项目下载到：`/dockerData/bolo/bolo-fantastic`下面
 
 - 将[https://git.zeekling.cn/linux/dockerFiles/src/branch/master/bolo](https://git.zeekling.cn/linux/dockerFiles/src/branch/master/bolo)
-  下面的dockerFiles和 settings.xml放置到博客bolo-solo的下面，执行下面命令编译并导出镜像：
+  下面的dockerFiles和 settings.xml放置到博客bolo-solo的下面，执行下面命令编译并导出镜像:
 
   ```sh
    docker build -t "zeek/bolo" .
