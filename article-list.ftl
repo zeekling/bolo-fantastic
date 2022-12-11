@@ -74,6 +74,7 @@
                 </div>
                 <#else>
                     <div class="card">
+					<!--
 						 <div class="card-image">
 						   <a href="${article.articlePermalink}">
 						     <img class="thumbnail" src="${adminUser.userAvatar!}" height="200" width="100"
@@ -81,6 +82,7 @@
 							 referrerpolicy="origin">
 						   </a>
 						 </div>
+						 -->
                         <div class="card-content article " id="card-content" style="width: 100%">
                             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                                 <div class="level-left">
@@ -102,10 +104,7 @@
                                 </div>
                             </div>
                             <h2 class="title is-size-5 is-size-5-mobile has-text-weight-normal">
-
-                                <a class="has-link-black-ter"
-                                    href="${article.articlePermalink}">${article.articleTitle!}</a>
-
+                                <a class="has-link-black-ter" href="${article.articlePermalink}">${article.articleTitle!}</a>
                             </h2>
                             <div id="is-hidden-touch" class="content is-hidden-touch is-size-6">
                                 <#if article.articleAbstractText!?length gt 128>
@@ -125,8 +124,6 @@
                         </div>
 
                     </div>
-
-
 
             </#if>
 

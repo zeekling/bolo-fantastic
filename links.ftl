@@ -47,7 +47,7 @@
 	        width:49%;
 			text-align: center;
 			background-color:#F8F8F8;
-			height:160px;
+			height:90px;
             padding: 5px;
 			border-radius:10px;
             border: 0;
@@ -136,14 +136,6 @@
                                                 <div>
                                                     <#list links as link>
                                                         <div class="link-body">
-                                                            <div class="link-avatar-div">
-                                                                <a href="${link.linkAddress}" rel="nofollow"
-                                                                   target="_blank">
-                                                                    <img alt="${link.linkDescription}"
-                                                                         src="${link.linkIcon}"
-                                                                         class="link-avatar">
-                                                                </a>
-                                                            </div>
                                                             <div class="link-contain-main">
                                                                 <div class="link-meta">
                                                                     <div itemprop="author"
