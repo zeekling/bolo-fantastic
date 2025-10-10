@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -31,12 +31,12 @@
 
 <head>
     <@head title="${allTagsLabel} - ${blogTitle}">
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/bulma.min.css"/>
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/all.min.css">
+        <link rel="stylesheet" href="${staticServePath}/js/lib/bulma.min.css"/>
+        <link rel="stylesheet" href="https://ftp.stackoverflow.wiki/bolo/fantastic/css/all.min.css">
         <link rel="stylesheet"
               href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/swiper.min.css">
-        <script src='https://www.zeekling.cn/cdn/css/js/swiper.min.js'></script>
+        <link rel="stylesheet" href="${staticServePath}/js/lib/swiper.min.css">
+        <script src='${staticServePath}/js/lib/swiper.min.js'></script>
     </@head>
     <#-- <#include "style.theme.ftl"> -->
 </head>
@@ -66,7 +66,7 @@
                                                 <div class="field is-grouped is-grouped-multiline">
                                                     <#list mostUsedCategories as category>
                                                         <div class="control">
-                                                            <a class="tags has-addons tags_bigger"
+                                                            <a class="tags has-addons"
                                                                href="${servePath}/category/${category.categoryURI}">
                                                                         <span
                                                                                 class="tag">${category.categoryTitle}</span>
@@ -86,12 +86,8 @@
                                                 </h3>
                                                 <div class="field is-grouped is-grouped-multiline">
                                                     <#list tags as tag>
-                                                        <div class="control">
-															<a class="tags has-addons tags_bigger"
-																href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}" >
-															<span class="tag">	${tag.tagTitle}</span>
-															</a>
-                                                        </div>
+                                                        <a href="${servePath}/tags/${tag.tagTitle?url('UTF-8')}"
+                                                           style="font-size:<#if tag.tagTitle?length gt 7> ${tag.tagPublishedRefCount+(tag.tagTitle?length)}<#else>${tag.tagPublishedRefCount+(tag.tagTitle?length)*2}</#if>px"> ${tag.tagTitle}</a>&nbsp;&nbsp;
                                                     </#list>
                                                 </div>
                                             </div>

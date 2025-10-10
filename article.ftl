@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -40,20 +40,13 @@
         <head>
             <@head title="${article.articleTitle} - ${blogTitle}"
                 description="${article.articleAbstract?html}">
-                <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/bulma.min.css" />
-                <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/all.min.css">
+                <link rel="stylesheet" href="${staticServePath}/js/lib/bulma.min.css" />
+                <link rel="stylesheet" href="https://ftp.stackoverflow.wiki/bolo/fantastic/css/all.min.css">
                 <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}" />
                 <link rel="stylesheet" href="${staticServePath}/skins/${skinDirName}/css/style.css?${staticResourceVersion}" />
-                     <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/swiper.min.css">
-        <script src='https://www.zeekling.cn/cdn/js/swiper.min.js'></script>
+                     <link rel="stylesheet" href="${staticServePath}/js/lib/swiper.min.css">
+        <script src='${staticServePath}/js/lib/swiper.min.js'></script>
             </@head>
-			<style type="text/css">
-			.columns {
-				margin-left: 0.25rem;
-				margin-right: -0.75rem;
-				margin-top: -0.75rem;
-			}
-			</style>
             <#-- <#include "style.theme.ftl"> -->
         </head>
             <body class="is-3-column">
@@ -68,44 +61,26 @@
                                 <div  class="column is-12-tablet is-8-desktop is-8-widescreen is-8-fullhd has-order-2 column-main">
                                     <div class="card" style="display: block">
                                         <div class="card-content article" id="card-content" style="width: 100%">
-                                            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
-                                                ${article.articleTitle}
-                                            </h1>
                                             <div class="level article-meta is-size-7 is-uppercase is-mobile is-overflow-x-auto">
                                                 <div class="level-left">
-                                                    <!--<div class="level-item has-text-grey">
-                                                       ${article.articleUpdateDate?string("yyyy.MM.dd")}
-                                                    </div>-->
                                                     <div class="level-item has-text-grey">
-                                                       ${article.articleCreateDate?string("yyyy.MM.dd")}
+                                                        ${article.articleCreateDate?string("yyyy-MM-dd")}/${article.articleUpdateDate?string("yyyy-MM-dd")}
                                                     </div>
-													<div>浏览
-													  <#assign viewCountStr=article.articleViewCount?string('#.###')/>
-													  <#if viewCountStr?length gt 3>
-													     <#assign viewCount=viewCountStr?number/>
-													     <#assign viewCountK=viewCount/1000 />
-													     ${viewCountK?string('#.##')}K
-													   <#else>
-													      ${article.articleViewCount}
-													   </#if>&nbsp;
-													</div>
-													<div>
-													   <#if article.articleCommentCount != 0>
-												          评论&nbsp;<a href="#comments">${article.articleCommentCount} </a>
-											           </#if>
-													</div>
                                                     <div class="level-item has-text-grey">
-                                                        &nbsp;分类:&nbsp;${article.articleCategory}
+                                                        ${article.articleCategory}
                                                     </div>
                                                 </div>
                                             </div>
+                                            <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
+                                                ${article.articleTitle}
+                                            </h1>
                                             <style>
                                                 .content .emoji {
                                                     width: 25px !important;
                                                     height: 25px !important;
                                                 }
                                             </style>
-                                            <div id="post-article" class="content post-article" >
+                                            <div id="post-article" class="content post-article">
                                                 ${article.articleContent}
                                             </div>
                                             <div class="level is-size-7 is-uppercase">
@@ -124,6 +99,7 @@
                                             </#if>
                                         </div>
                                     </div>
+                                    <#if interactive == "on">
                                     <div class="card">
                                         <div class="card-content">
                                             <h3 class="title is-5 has-text-weight-normal">评论</h3>
@@ -132,6 +108,7 @@
                                             </@comments>
                                         </div>
                                     </div>
+                                    </#if>
                                 </div>
                                 <div class="column is-4-tablet is-3-desktop is-3-widescreen is-3-fullhd  is-hidden-touch  has-order-3 column-right <%= sticky_class(position) %>">
                                 <#include "toc-post.ftl">
@@ -165,18 +142,17 @@
             </div>
             <a id="back-to-top" title="返回顶部" href="javascript:"><i class="fas fa-chevron-up"></i></a>
             <#include "footer.ftl">
-			<@comment_script oId=article.oId commentable=article.commentable>
-			   <#if 0 !=randomArticlesDisplayCount>
-			      page.loadRandomArticles('<h3>${randomArticlesLabel}</h3>');
-			   </#if>
-			   <#if 0 !=relevantArticlesDisplayCount>
-			       page.loadRelevantArticles('${article.oId}','<h3>${relevantArticlesLabel}</h3>');
-               </#if>
-			   Skin.initArticle()
-			</@comment_script>
+            <@comment_script oId=article.oId commentable=article.commentable>
+                <#if 0 !=randomArticlesDisplayCount>
+                    page.loadRandomArticles('<h3>${randomArticlesLabel}</h3>');
+                </#if>
+                <#if 0 !=relevantArticlesDisplayCount>
+                    page.loadRelevantArticles('${article.oId}', '<h3>${relevantArticlesLabel}</h3>');
+                </#if>
+                Skin.initArticle()
+            </@comment_script>
             <script>
                 // 延时检测右侧 “相关阅读” 是否为空，如果空则删除空 div，好看些
-				/**
                 $(function () {
                                         var tempHtml =
                                             '<a rel="nofollow" href="javascript:void(0)"><i class="fas fa-search fa-spin"></i> 努力寻找中 ...</a>';
@@ -198,15 +174,7 @@
                                                 }, 1000)
                                             }
                                         }, 3000)
-                                    })**/
-			$(document).ready(function(){
-				var content = $("#post-article");
-				var img_url = content.attr("data-img");
-				if (content.html().trim().startsWith('<p><a class="gallery-item" href="javascript:void(0)"><img')){
-					var img = content.find("p a").get(0);
-					img.remove();
-				}
-			})
+                                    })
             </script>
         </body>
     </html>

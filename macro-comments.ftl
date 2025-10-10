@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -569,7 +569,8 @@
                     <section role="form" class="comment-editor">
                         <div class="inner">
                             <div class="commentator">
-                                <img src="https://pan.zeekling.cn/cdn/images/comment.png" class="avatar">
+                                <img src="https://pic.stackoverflow.wiki/uploadImages/114/246/231/87/2020/06/06/02/26/65e10ea4-41e0-4da8-82fa-a00da2770ce2.png"
+                                     class="avatar">
                             </div>
                             <form class="comment-form">
                                 <div class="author-info">

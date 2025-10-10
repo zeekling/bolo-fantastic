@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -32,44 +32,30 @@
 
 <head>
     <@head title="${linkLabel} - ${blogTitle}">
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/bulma.min.css"/>
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/all.min.css">
+        <link rel="stylesheet" href="${staticServePath}/js/lib/bulma.min.css"/>
+        <link rel="stylesheet" href="https://ftp.stackoverflow.wiki/bolo/fantastic/css/all.min.css">
         <link rel="stylesheet"
               href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/swiper.min.css">
-        <script src='https://www.zeekling.cn/cdn/js/swiper.min.js'></script>
+        <link rel="stylesheet" href="${staticServePath}/js/lib/swiper.min.css">
+        <script src='${staticServePath}/js/lib/swiper.min.js'></script>
     </@head>
     <style>
         .link-body {
+            position: relative;
             margin: 10px auto;
-			display:inline-block;
-			vertical-align:text-top;
-	        width:49%;
-			text-align: center;
-			background-color:#F8F8F8;
-			height:90px;
-            padding: 5px;
-			border-radius:10px;
+            padding: 0;
             border: 0;
             font-size: 100%;
             font-style: inherit;
             font-weight: inherit;
             outline: 0;
+            vertical-align: baseline;
+            display: flex;
+            flex-direction: row;
         }
-		.link-avatar-div{
-			width:90px;
-			height:60px;
-			display:inline-block;
-			margin-buttom:10px;
-		}
-		.link-avatar-div a{
-			margin:auto;
-			width:90px;
-			height:60px;
-		}
+
         .link-avatar {
             display: block;
-			text-align: center;
             -o-object-fit: cover;
             object-fit: cover;
             border-radius: 100%;
@@ -80,10 +66,7 @@
             -webkit-transition: all .8s;
             transition: all .8s
         }
-		.link-content{
-			width:90%;
-			font-size:12px;
-		}
+
         .link-avatar:hover {
             -webkit-transform: rotate(1turn);
             transform: rotate(1turn)
@@ -93,19 +76,16 @@
             margin-left: 58px;
             border: 0;
             font-size: 100%;
-			width:90%;
             font-style: inherit;
             font-weight: inherit;
             margin: 0;
-            padding-top:10px ;
-            display: inline-block;
+            outline: 0;
+            padding: 0;
+            display: flex;
             flex-direction: column;
             justify-content: center;
             vertical-align: baseline;
         }
-       .level .google-auto-placed {
-	      display:none;
-       }
     </style>
 
     <#-- <#include "style.theme.ftl"> -->
@@ -136,6 +116,14 @@
                                                 <div>
                                                     <#list links as link>
                                                         <div class="link-body">
+                                                            <div class="link-avatar-div">
+                                                                <a href="" rel="nofollow"
+                                                                   target="_blank">
+                                                                    <img alt="${link.linkDescription}"
+                                                                         src="${link.linkIcon}"
+                                                                         class="link-avatar">
+                                                                </a>
+                                                            </div>
                                                             <div class="link-contain-main">
                                                                 <div class="link-meta">
                                                                     <div itemprop="author"
@@ -181,16 +169,6 @@
 
 
 <a id="back-to-top" title="返回顶部" href="javascript:"><i class="fas fa-chevron-up"></i></a>
-<!-- 博客底部-->
-<ins class="adsbygoogle"
-     style="display:block;height:90px;width:728px;margin:auto;text-align:center;"
-	 data-ad-client="ca-pub-1331219010215317"
-	 data-ad-slot="2801313884"
-	 data-full-width-responsive="true">
-</ins>
-<script>
-	(adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <#include "footer.ftl">
 </body>
 

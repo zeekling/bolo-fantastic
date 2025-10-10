@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -31,12 +31,12 @@
 
 <head>
     <@head title="${tag.tagTitle} ${tagLabel} - ${blogTitle}">
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/bulma.min.css"/>
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/all.min.css">
+        <link rel="stylesheet" href="${staticServePath}/js/lib/bulma.min.css"/>
+        <link rel="stylesheet" href="https://ftp.stackoverflow.wiki/bolo/fantastic/css/all.min.css">
         <link rel="stylesheet"
               href="${staticServePath}/skins/${skinDirName}/css/base.css?${staticResourceVersion}"/>
-        <link rel="stylesheet" href="https://www.zeekling.cn/cdn/css/swiper.min.css">
-        <script src='https://www.zeekling.cn/cdn/js/swiper.min.js'></script>
+        <link rel="stylesheet" href="${staticServePath}/js/lib/swiper.min.css">
+        <script src='${staticServePath}/js/lib/swiper.min.js'></script>
     </@head>
     <#-- <#include "style.theme.ftl"> -->
 </head>

@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -20,7 +20,7 @@
 <div>
     <div id="toc"></div>
 </div>
-<script src="https://www.zeekling.cn/cdn/js/jquery-3.4.1.min.js"  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="${staticServePath}/js/lib/jquery/jquery.min.js"></script>
 <script>
     // initToc()
     // function initToc() {
