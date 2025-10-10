@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -57,7 +57,7 @@
                       class="comment-time">
                     ${comment.commentDate2?string("yyyy-MM-dd HH:mm")}
                 </time>
-                <a href="#li-comment-${comment.oId}" class="comment-id" style="display:none">#${comment.oId}</a></div>
+                <a href="#li-comment-${comment.oId}" class="comment-id">#${comment.oId}</a></div>
             <style>
                 .comment-content .emoji {
                     width: 25px !important;

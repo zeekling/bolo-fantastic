@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -507,11 +507,4 @@
     .has-text-black-ter {
         color: var(--color) !important;
     }
-	.user__site{
-		    display: inline-block;
-			height: 16px;
-			line-height: 16px;
-			border-bottom: 0;
-			margin: 8px 5px 0 0;
-	}
 </style>

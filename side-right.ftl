@@ -1,7 +1,7 @@
 <#--
 
     Bolo - A stable and beautiful blogging system based in Solo.
-    Copyright (c) 2020, https://github.com/adlered
+    Copyright (c) 2020-present, https://github.com/bolo-blog
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU Affero General Public License as published by
@@ -18,38 +18,30 @@
 
 -->
 <div class="card widget">
-  <div class="card-content" style="width:100%">
-    <div class="menu">
-	  <div class="menu-label">
-	 ${blogTitle!}-${noticeBoardLabel}
-	  </div>
-	  <ul class="menu-list">
-	  ${noticeBoard}
-	  </ul>
-	</div>
-  </div>
-</div>
-<div class="card widget">
-	<div class="card-content" style="width:100%;min-width:300px">
-		<div class="menu">
-			<input type="text" required="required" value="" name="s" id="search" onkeydown="enterSearch(event)">
-	    	<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search()">
-		</div>
-	</div>
-</div>
-<div class="card widget">
     <div class="card-content">
-        <div class="menu-label">
-           ${blogTitle!}-${mostViewCountArticlesLabel}
-        </div>
+        <h3 class="menu-label">
+            ${mostViewCountArticlesLabel}
+        </h3>
 
         <#list mostViewCountArticles as article>
             <article class="media">
+                <#if article.articleImg1URL?? && article.articleImg1URL!=''>
+                    <a href="${servePath}${article.articlePermalink}" class="media-left">
+                        <p class="image is-64x64">
+                            <img class="thumbnail" src="${article.articleImg1URL!}" alt="${article.articleTitle!}">
+                        </p>
+                    </a>
+                </#if>
                 <div class="media-content">
                     <div class="content">
-                        <div style="padding-top: 10px;padding-left:20px;" >
-                            <a href="${article.articlePermalink}" class="">${article.articleTitle!}</a>
+                        <div style="padding-top: 10px;">
+
+                            <div class="has-text-grey is-size-7 is-uppercase">
+                                ${article.articleViewCount}浏览
+                            </div>
                         </div>
+                        <a href="${servePath}${article.articlePermalink}"
+                           class="title has-link-black-ter is-size-6 has-text-weight-normal">${article.articleTitle!}</a>
                     </div>
                 </div>
             </article>
@@ -58,19 +50,29 @@
     </div>
 </div>
 <div class="card widget">
-	<div class="card-content">
-		<div class="menu">
-			<div class="menu-label">${blogTitle!}-${tagLabel}</div>
-			<div class="field is-grouped is-grouped-multiline">
-			<#list mostUsedTags as tag>
-				<div class="control">
-					<a class="tags has-addons" href="/tags/${tag.tagTitle?url('UTF-8')}">
-						<span class="tag">${tag.tagTitle}</span>
-					    <span class="tag is-grey">${tag.tagPublishedRefCount!}</span>
-					</a>
-				</div>
-			</#list>
-			</div>
-		</div>
-	</div>
+    <div class="card-content">
+        <div class="menu">
+            <h3 class="menu-label">
+                ${archiveLabel}
+            </h3>
+            <ul class="menu-list">
+                <#list archiveDates as archiveDate>
+                    <li>
+                        <a class="level is-marginless"
+                           href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
+                            <span class="level-start">
+                                <span class="level-item">${archiveDate.archiveDateYear}
+                                    ${yearLabel}
+                                    ${archiveDate.archiveDateMonth}
+                                    ${monthLabel}</span>
+                            </span>
+                            <span class="level-end">
+                                <span class="level-item tag">${archiveDate.archiveDatePublishedArticleCount}</span>
+                            </span>
+                        </a>
+                    </li>
+                </#list>
+            </ul>
+        </div>
+    </div>
 </div>
