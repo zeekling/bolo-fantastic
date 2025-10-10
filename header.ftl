@@ -17,6 +17,78 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 -->
+<style type="text/css">
+.halo-comment .comment-textarea textarea{
+	display:block;
+}
+.tags_bigger .tag{
+   font-size:13px;
+}
+.user__site {
+	display: inline-block;
+	height: 16px;
+	line-height: 16px;
+	border-bottom: 0;
+	margin: 8px 5px 0 0;
+	width: 16px;
+}
+
+.blog-slider__img{
+	margin-left: 20px;
+	width: 280px;
+	height: 178px;
+}
+.card-normal .card .card-image img{
+	margin-left: 13px;
+}
+#search,#search-m{
+	box-shadow: none;
+	border: 1px solid #e1e8ed;
+	border-radius: 5px;
+	box-sizing: border-box;
+	color:#657786;
+	resize: vertical;
+	height:30px;
+}
+
+.vditor-tooltipped {
+	border: none !important;
+}
+.vditor-toolbar{
+	padding-left: 15px !important;
+}
+.vditor-reset{
+	background-color:white !important;
+}
+.emoji{
+	width:20px;
+}
+.media-comment .media-content {
+	max-width: 170px;
+	overflow: hidden;
+	max-height: 90px;
+}
+.halo-comment {
+   min-width: 300px;
+}
+.blog-slider__content{
+	font-size: 12px;
+}
+.archive-year .fa-chevron-down, .archive-year .fa-chevron-up {
+  background-position: 54px -84px;
+  cursor: pointer;
+  height: 16px;
+  background-repeat: no-repeat;
+}
+#archiveSide .archive-year {
+  color: #a12f08ff;
+  font-weight: bold;
+  height: 18px;
+  line-height: 18px;
+  list-style: none;
+}
+
+</style>
 <nav class="navbar navbar-main  is-paddingless ">
     <div class="container ">
         <div class="navbar-brand transparent">
