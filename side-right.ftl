@@ -37,7 +37,14 @@
                         <div style="padding-top: 10px;">
 
                             <div class="has-text-grey is-size-7 is-uppercase">
-                                ${article.articleViewCount}浏览
+                              <#assign viewCountStr=article.articleViewCount?string('#.###')/>
+							    <#if viewCountStr?length gt 3>
+							    <#assign viewCount=viewCountStr?number/>
+								<#assign viewCountK=viewCount/1000 />
+								  ${viewCountK?string('#.##')}K浏览
+							    <#else>
+							      ${article.articleViewCount}浏览
+							   </#if>
                             </div>
                         </div>
                         <a href="${servePath}${article.articlePermalink}"
@@ -50,14 +57,22 @@
     </div>
 </div>
 <div class="card widget">
+	<div class="card-content" style="width:100%;min-width:300px">
+		<div class="menu">
+			<input type="text" required="required" value="" name="s" id="search" onkeydown="enterSearch(event)">
+	    	<input type="submit" id="searchsubmit" class="button" value="搜索" onclick="search()">
+		</div>
+	</div>
+</div>
+<div class="card widget">
     <div class="card-content">
         <div class="menu">
             <h3 class="menu-label">
                 ${archiveLabel}
             </h3>
-            <ul class="menu-list">
+            <ul class="menu-list" id="archiveSide">
                 <#list archiveDates as archiveDate>
-                    <li>
+                    <li data-year="${archiveDate.archiveDateYear}">
                         <a class="level is-marginless"
                            href="${servePath}/archives/${archiveDate.archiveDateYear}/${archiveDate.archiveDateMonth}">
                             <span class="level-start">
