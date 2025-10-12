@@ -69,6 +69,22 @@
                                                     <div class="level-item has-text-grey">
                                                         ${article.articleCategory}
                                                     </div>
+                                                    <div class="level-item has-text-grey">
+                                                     浏览
+													  <#assign viewCountStr=article.articleViewCount?string('#.###')/>
+													  <#if viewCountStr?length gt 3>
+													     <#assign viewCount=viewCountStr?number/>
+													     <#assign viewCountK=viewCount/1000 />
+													     ${viewCountK?string('#.##')}K
+													   <#else>
+													      ${article.articleViewCount}
+													   </#if>
+													</div>
+                                                    <div class="level-item has-text-grey">
+													   <#if article.articleCommentCount != 0>
+												          评论&nbsp;<a href="#comments">${article.articleCommentCount} </a>
+											           </#if>
+													</div>
                                                 </div>
                                             </div>
                                             <h1 class="title is-size-3 is-size-4-mobile has-text-weight-normal">
