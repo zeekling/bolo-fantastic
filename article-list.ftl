@@ -44,6 +44,16 @@
                                             style="display:inline-block">
                                             ${article.articleCreateDate?string("yyyy年MM月dd日")}
                                         </span>
+                                        <span class="blog-slider__code" style="display:inline-block">
+                                            <#assign viewCountStr=article.articleViewCount?string('#.###')/>
+										    <#if viewCountStr?length gt 3>
+										      <#assign viewCount=viewCountStr?number/>
+											  <#assign viewCountK=viewCount/1000 />
+											  ${viewCountK?string('#.##')}K
+										    <#else>
+										      ${article.articleViewCount}
+										    </#if>
+                                        </span>
                                         <#if article.categoryURI??>
                                             <span><a class="has-link-black-ter"
                                                     href="${servePath}/category/${article.categoryURI}">
@@ -85,6 +95,17 @@
                                         class="level-item has-text-grey">
                                         ${article.articleCreateDate?string("yyyy年MM月dd日")}
                                     </time>
+                                    <span class="level-item has-text-grey" >
+                                    &nbsp;浏览
+                                    <#assign viewCountStr=article.articleViewCount?string('#.###')/>
+									<#if viewCountStr?length gt 3>
+										<#assign viewCount=viewCountStr?number/>
+										<#assign viewCountK=viewCount/1000 />
+										${viewCountK?string('#.##')}K
+									<#else>
+										${article.articleViewCount}
+									</#if>
+                                    </span>
                                     <#if article.articleCategory?? && article.articleCategory !="">
                                         <a class="has-link-black-ter"
                                             href="${servePath}/category/${article.categoryURI}">
