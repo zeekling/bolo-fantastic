@@ -40,13 +40,13 @@ docker run --detach --name bolo --network=host  \
 ## 个站样式
 
 首页显示：
-![https://pan.zeekling.cn/oit_2020-09-20_14-32.png](https://pan.zeekling.cn/oit_2020-09-20_14-32.png)
+![https://pan.zeekling.cn/oit_2020-09-20_14-32.png](https://pan.zeekling.cn/root/oit_2020-09-20_14-32.png)
 
 页脚显示：
-![202009201434.png](https://pan.zeekling.cn/713_2020-09-20_14-34.png)
+![202009201434.png](https://pan.zeekling.cn/root/713_2020-09-20_14-34.png)
 
 友链显示：
 
-![202009201435.png](https://pan.zeekling.cn/46U_2020-09-20_14-35.png)
+![202009201435.png](https://pan.zeekling.cn/root/46U_2020-09-20_14-35.png)
 
 
