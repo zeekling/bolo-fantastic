@@ -114,6 +114,21 @@ $(document).ready(function(){
 		$(this).lazyload();
 	});
 });
+
+function showImage(w, h,url, alt){
+	layer.photos({
+		photos:{
+			"title":"${blogTitle!}图片显示",
+			"id":"",
+			"data":[{
+				"alt":alt,
+				"src":url,
+				"thumb":url
+			}]
+		},anim: 0
+	});
+}
+
 function enterSearch(event){
 	if(event.keyCode == "13"){
 		search();
